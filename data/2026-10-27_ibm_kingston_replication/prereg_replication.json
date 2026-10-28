@@ -1,0 +1,380 @@
+{
+ "experiment": "Replication of the dynamical-decoupling test of one controlled modular multiplication (N=21, a=2, t=3), identical circuits, one job",
+ "timestamp": "2026-10-27T21:59:36+01:00",
+ "status": "pre-registered before any submission",
+ "source_preregistration": "experiences/2026-10-27_kingston_arith/prereg_arith_dd.json",
+ "source_preregistration_sha256": "b062ddf7e3099fa5165a8f17cf6a9a60f3eedf882271fe4e3e78e9547bab21ef",
+ "source_circuits": "experiences\\2026-10-27_kingston_arith\\prereg_arith_dd_circuits.qpy",
+ "source_circuits_sha256": "3fc675a4b4336480efec704c13c06b0f162935b13dd66e1a5d8aff0c2222160c",
+ "circuits_identical_to_source": true,
+ "previous_dd_run": {
+  "job": "dbgfu89j4t8s73ac9l00",
+  "S": {
+   "true_DD": {
+    "S": 0.01892857142857146,
+    "se": 0.0026860911454005833,
+    "n": 70000
+   },
+   "mult_by_1_DD": {
+    "S": 0.0025333333333333874,
+    "se": 0.004364224185435567,
+    "n": 30000
+   },
+   "wrong_constant_DD": {
+    "S": 0.0006999999999999784,
+    "se": 0.004083977541019974,
+    "n": 30000
+   },
+   "classical_exponent_DD": {
+    "S": -0.0006999999999999784,
+    "se": 0.004075262131991567,
+    "n": 30000
+   }
+  },
+  "z_primary": {
+   "mult_by_1_DD": 3.199319745522832,
+   "wrong_constant_DD": 3.7291391119039847,
+   "classical_exponent_DD": 4.021535077571826
+  },
+  "single_shot_variance": {
+   "true_DD": 0.5050559948979593,
+   "mult_by_1_DD": 0.5713935822222221,
+   "wrong_constant_DD": 0.5003661766666667,
+   "classical_exponent_DD": 0.49823284333333345
+  },
+  "phase_fit_true_DD": {
+   "x": 0.07490322650291295,
+   "x_se": 0.01062557482891284,
+   "two_lnLR": 51.34056844713632,
+   "identifiable": "v and phase",
+   "v": 0.07620729288770278,
+   "v_se": 0.010629770534727792,
+   "phase_deg": -10.614767169809406,
+   "phase_se_deg": 8.078075492552205
+  }
+ },
+ "calibration_snapshot": "experiences/2026-10-27_kingston_replication/calibration_prereg.json",
+ "calibration_snapshot_sha256": "ad477cb92cc77b10b7606c9445f0a8faf3d9f8b7b9fbf0319898d3c73dc2c5e2",
+ "statistic": "S = P(y in {0,4}) - P(y in {2,6}) (exponent register y, 3 bits)",
+ "standard_error": "Var(S_hat) = [pA + pB - (pA - pB)^2] / n per circuit (multinomial); difference of two independent circuits: sqrt(Var1 + Var2)",
+ "verdict_rule_primary": "SIGNAL (replicated) iff S(true_DD) > 0 AND S(true_DD) - S(w) >= 3 standard errors for EACH w in {mult_by_1_DD, wrong_constant_DD, classical_exponent_DD}; otherwise NOT REPLICATED",
+ "reported_not_for_verdict": [
+  "S(true_DD) - S(true_DD, first DD run) and inverse-variance mean of both runs",
+  "fitted visibility and phase of the e1+e2 coherence of true_DD; v cos(phase) of the e2 coherence of mult_by_1_DD",
+  "S / P(y0=0) and P(y0=0) of every circuit"
+ ],
+ "shot_allocation": "maximin of the expected margins true_DD - witness with witness S = 0: n_w = V_w / x, n_t = V_t / y, y / x = sqrt(c_t V_t / sum_w c_w V_w), c = QPU s per shot (run_ibm.qpu_time), V = single-shot variance of S observed in the first DD run; rounded down to 100",
+ "single_shot_variance_used": {
+  "true_DD": 0.505056,
+  "mult_by_1_DD": 0.571394,
+  "wrong_constant_DD": 0.500366,
+  "classical_exponent_DD": 0.498233
+ },
+ "circuits_order": [
+  "true_DD",
+  "mult_by_1_DD",
+  "wrong_constant_DD",
+  "classical_exponent_DD"
+ ],
+ "backend": "ibm_kingston",
+ "physical_line": [
+  54,
+  55,
+  59,
+  75,
+  74,
+  73,
+  72,
+  71,
+  70,
+  69,
+  68,
+  67,
+  57,
+  47,
+  46,
+  45,
+  44
+ ],
+ "shots": {
+  "true_DD": 65300,
+  "mult_by_1_DD": 41900,
+  "wrong_constant_DD": 36700,
+  "classical_exponent_DD": 36500
+ },
+ "qpu_estimate_s": 60.0,
+ "qpu_estimator": "run_ibm.qpu_time: 2 s per circuit + shots x (250 us repetition delay + circuit duration + 5 us); first DD run: estimate 67.5 s, charged 61 s",
+ "budget_s": 60.0,
+ "max_execution_time_s": 80,
+ "circuits_file": "experiences\\2026-10-27_kingston_replication\\prereg_replication_circuits.qpy",
+ "circuits_sha256": "fec583977c1c00dcd4593ea4f74e30e1060fc7b22dcb6fb2e9ba43f7098617ec",
+ "circuits": {
+  "true_DD": {
+   "logical": "true",
+   "dd": true,
+   "cz": 585,
+   "cz_conditional": 0,
+   "x_gates": 211,
+   "added_operations": {
+    "delay": 514,
+    "barrier": 9,
+    "x": 200
+   },
+   "duration_us": 32.61,
+   "esp": 0.08534,
+   "ideal_P": [
+    0.1875,
+    0.125,
+    0.0625,
+    0.125,
+    0.1875,
+    0.125,
+    0.0625,
+    0.125
+   ],
+   "ideal_S": 0.25
+  },
+  "mult_by_1_DD": {
+   "logical": "mult_by_1",
+   "dd": true,
+   "cz": 587,
+   "cz_conditional": 0,
+   "x_gates": 210,
+   "added_operations": {
+    "delay": 472,
+    "barrier": 9,
+    "x": 200
+   },
+   "duration_us": 32.39,
+   "esp": 0.08647,
+   "ideal_P": [
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0
+   ],
+   "ideal_S": 0.0
+  },
+  "wrong_constant_DD": {
+   "logical": "wrong_constant",
+   "dd": true,
+   "cz": 585,
+   "cz_conditional": 0,
+   "x_gates": 208,
+   "added_operations": {
+    "delay": 513,
+    "barrier": 9,
+    "x": 198
+   },
+   "duration_us": 32.58,
+   "esp": 0.0855,
+   "ideal_P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ],
+   "ideal_S": 0.0
+  },
+  "classical_exponent_DD": {
+   "logical": "classical_exponent",
+   "dd": true,
+   "cz": 585,
+   "cz_conditional": 0,
+   "x_gates": 213,
+   "added_operations": {
+    "delay": 515,
+    "barrier": 9,
+    "x": 202
+   },
+   "duration_us": 34.76,
+   "esp": 0.07416,
+   "ideal_P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ],
+   "ideal_S": 0.0
+  }
+ },
+ "exactness_noiseless_dynamic_simulation": {
+  "true_DD": {
+   "max_abs_dev_model": 2.6954580512050796e-09,
+   "max_abs_dev_without_dd": 8.326672684688674e-17,
+   "S": 0.2499999999999986,
+   "P": [
+    0.1875,
+    0.125,
+    0.0625,
+    0.125,
+    0.1875,
+    0.125,
+    0.0625,
+    0.125
+   ]
+  },
+  "mult_by_1_DD": {
+   "max_abs_dev_model": 2.9765828928163965e-15,
+   "max_abs_dev_without_dd": 1.1102230246251565e-16,
+   "S": 6.661338147750939e-16,
+   "P": [
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0
+   ]
+  },
+  "wrong_constant_DD": {
+   "max_abs_dev_model": 2.60208654623284e-09,
+   "max_abs_dev_without_dd": 5.551115123125783e-17,
+   "S": 4.440892098500626e-16,
+   "P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ]
+  },
+  "classical_exponent_DD": {
+   "max_abs_dev_model": 1.4988010832439613e-15,
+   "max_abs_dev_without_dd": 5.551115123125783e-17,
+   "S": -5.551115123125783e-17,
+   "P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ]
+  }
+ },
+ "checks": {
+  "duration_changes_vs_source_calibration": {},
+  "isa_calibration_target": "all circuits valid",
+  "isa_live_target": "all circuits valid",
+  "live_check_time": "2026-10-27T21:49:11+01:00",
+  "duration_changes_live_vs_source_calibration": {}
+ },
+ "predictions": {
+  "data_based": {
+   "description": "S(true_DD) = 0.25 x fitted visibility of true_DD in the first DD run (phase refocused, same circuits); witnesses 0; probability of meeting the rule by Gaussian simulation of the plan",
+   "visibility": 0.07621,
+   "visibility_se": 0.01063,
+   "S": {
+    "true_DD": 0.01905,
+    "mult_by_1_DD": 0.0,
+    "wrong_constant_DD": 0.0,
+    "classical_exponent_DD": 0.0
+   },
+   "z": {
+    "mult_by_1_DD": 4.12116,
+    "wrong_constant_DD": 4.12146,
+    "classical_exponent_DD": 4.11989
+   },
+   "z_min": 4.11989,
+   "probability_rule_met": 0.70229,
+   "probability_rule_met_v_uncertain": 0.67047,
+   "observed_S_true_DD": 0.01893,
+   "z_min_at_observed_S": 4.09324,
+   "probability_rule_met_observed_S_uncertain": 0.66055
+  },
+  "standard_noise_model": {
+   "description": "Standard noise model (noise_model.py): calibrated depolarising gate errors, readout, T1/T2 in idle Today's calibration; S times the X-gate error factor.",
+   "trajectories": {
+    "true": 300,
+    "witness": 100
+   },
+   "S_model": {
+    "true_DD": 0.03445,
+    "mult_by_1_DD": -0.00253,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0
+   },
+   "S_model_traj_se": {
+    "true_DD": 0.00498,
+    "mult_by_1_DD": 0.00279,
+    "wrong_constant_DD": 0.00148,
+    "classical_exponent_DD": 0.0
+   },
+   "S": {
+    "true_DD": 0.03281,
+    "mult_by_1_DD": -0.00241,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0
+   },
+   "z": {
+    "mult_by_1_DD": 7.52085,
+    "wrong_constant_DD": 7.08433,
+    "classical_exponent_DD": 7.09831
+   },
+   "z_min": 7.08433,
+   "P": {
+    "true_DD": [
+     0.13403,
+     0.1247,
+     0.11677,
+     0.12384,
+     0.13424,
+     0.12501,
+     0.11705,
+     0.12437
+    ],
+    "mult_by_1_DD": [
+     0.14874,
+     0.10104,
+     0.15036,
+     0.10078,
+     0.14887,
+     0.10016,
+     0.14979,
+     0.10026
+    ],
+    "wrong_constant_DD": [
+     0.12646,
+     0.12405,
+     0.12588,
+     0.12327,
+     0.12573,
+     0.12394,
+     0.12628,
+     0.1244
+    ],
+    "classical_exponent_DD": [
+     0.12501,
+     0.12499,
+     0.12501,
+     0.12499,
+     0.12501,
+     0.12499,
+     0.12501,
+     0.12499
+    ]
+   },
+   "probability_rule_met": 0.99338
+  }
+ }
+}

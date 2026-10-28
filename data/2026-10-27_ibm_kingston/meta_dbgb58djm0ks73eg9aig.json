@@ -1,0 +1,45 @@
+{
+ "N": 21,
+ "a": 2,
+ "t": 5,
+ "order": [
+  "true",
+  "classical_exponent",
+  "decohered_e2",
+  "decohered_e3",
+  "decohered_e4",
+  "scrambled_constants"
+ ],
+ "plan": {
+  "true": 60000,
+  "classical_exponent": 27999,
+  "decohered_e2": 27999,
+  "decohered_e3": 27999,
+  "decohered_e4": 27999,
+  "scrambled_constants": 27999
+ },
+ "backend": "ibm_kingston",
+ "path": [
+  54,
+  55,
+  59,
+  75,
+  74,
+  73,
+  72,
+  71,
+  70,
+  69,
+  68,
+  67,
+  57,
+  47,
+  46,
+  45,
+  44,
+  43,
+  42
+ ],
+ "date": "2026-10-27T15:18:10",
+ "qpu_estimate_s": 77.62624676400017
+}

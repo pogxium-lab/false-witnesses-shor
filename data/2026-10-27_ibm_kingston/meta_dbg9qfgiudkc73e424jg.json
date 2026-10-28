@@ -1,0 +1,36 @@
+{
+ "N": 15,
+ "a": 7,
+ "t": 3,
+ "order": [
+  "true",
+  "classical_exponent",
+  "decohered_e2",
+  "scrambled_constants"
+ ],
+ "plan": {
+  "true": 60000,
+  "classical_exponent": 46666,
+  "decohered_e2": 46666,
+  "scrambled_constants": 46666
+ },
+ "backend": "ibm_kingston",
+ "path": [
+  99,
+  95,
+  94,
+  93,
+  79,
+  73,
+  72,
+  71,
+  70,
+  69,
+  68,
+  67,
+  57,
+  47
+ ],
+ "date": "2026-10-27T13:46:54",
+ "qpu_estimate_s": 67.045622248
+}

@@ -1,0 +1,39 @@
+{
+ "local_time_utc": "2026-10-28T09:31:54+00:00",
+ "tsa_url": "https://freetsa.org/tsr",
+ "tsa_certificates": {
+  "cacert.pem": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+  "tsa.crt": "8bfb0305bb64e2571ca507552ef3245cb1c2fee8728e0ff8689225081ea13467"
+ },
+ "files": {
+  "blind_draw.json": {
+   "sha256": "7a547fb2d0172c99b7c8ca74de3e07c5f35f6eb08180b68f5d4aa8e4529a3e5b",
+   "rfc3161": {
+    "tsr": "blind_draw.json.tsr",
+    "time": "Oct 28 09:31:55 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "blind_draw_circuits.qpy": {
+   "sha256": "5fe168baf0e42b56b7b882a31515ce12ecdea55e390fb371fca7b004d336933a",
+   "rfc3161": {
+    "tsr": "blind_draw_circuits.qpy.tsr",
+    "time": "Oct 28 09:31:56 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  }
+ },
+ "opentimestamps": {
+  "command": "ots stamp",
+  "returncode": 0,
+  "output": "Submitting to remote calendar https://a.pool.opentimestamps.org\nSubmitting to remote calendar https://b.pool.opentimestamps.org\nSubmitting to remote calendar https://a.pool.eternitywall.com\nSubmitting to remote calendar https://ots.btc.catallaxy.com",
+  "proofs": {
+   "blind_draw.json": true,
+   "blind_draw_circuits.qpy": true
+  }
+ }
+}

@@ -1,0 +1,85 @@
+Backend/calibration: data/2026-10-27_ibm_kingston_arith/calibration_prereg.json
+N=21, a=2, t=3, physical line (17 qubits): [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]
+  true                CZ= 585 (+0 conditional)  2q blocks=207  duration~31 us  ESP=0.1146  ideal S=+0.2500  ideal P=[0.1875 0.125  0.0625 0.125  0.1875 0.125  0.0625 0.125 ]
+  mult_by_1           CZ= 587 (+0 conditional)  2q blocks=207  duration~31 us  ESP=0.1163  ideal S=+0.0000  ideal P=[0.25 0.   0.25 0.   0.25 0.   0.25 0.  ]
+  wrong_constant      CZ= 585 (+0 conditional)  2q blocks=207  duration~31 us  ESP=0.1148  ideal S=+0.0000  ideal P=[0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]
+  decohered_e2        CZ= 585 (+0 conditional)  2q blocks=207  duration~31 us  ESP=0.1128  ideal S=+0.0000  ideal P=[0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]
+  classical_exponent  CZ= 585 (+0 conditional)  2q blocks=207  duration~33 us  ESP=0.0970  ideal S=+0.0000  ideal P=[0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]
+Plan: {'true': 91000, 'mult_by_1': 45000, 'wrong_constant': 45000, 'decohered_e2': 45000, 'classical_exponent': 45000} -> 271000 shots, estimated QPU time 87.5 s (budget 90 s)
+Transpiled circuits saved: data\2026-10-27_ibm_kingston_arith\prereg_arith_circuits.qpy (order ['true', 'mult_by_1', 'wrong_constant', 'decohered_e2', 'classical_exponent'])
+
+Exactness (noiseless Aer statevector vs exact model, TVD):
+  true                TVD = 4.8e-10
+  mult_by_1           TVD = 2.1e-16
+  wrong_constant      TVD = 1.8e-16
+  decohered_e2        TVD = 1.7e-16
+  classical_exponent  TVD = 1.1e-16
+
+DRY RUN (chain check): 40 shots per noisy DYNAMIC circuit
+  [true] 40 shots simulated in 22 s
+  [mult_by_1] 40 shots simulated in 43 s
+  [wrong_constant] 40 shots simulated in 34 s
+  [decohered_e2] 40 shots simulated in 30 s
+  [classical_exponent] 40 shots simulated in 46 s
+
+=== Analysis: S = P(y in {0, 4}) - P(y in {2, 6}), N=21, a=2, t=3 ===
+  true               : S = +0.0500 +- 0.1222  (ideal +0.2500, 40 shots; S/P(y0=0) = +0.0833)
+  mult_by_1          : S = +0.1500 +- 0.1093  (ideal +0.0000, 40 shots; S/P(y0=0) = +0.3000)   true - mult_by_1 = -0.1000 (-0.6 sigma)
+  wrong_constant     : S = -0.0500 +- 0.0997  (ideal +0.0000, 40 shots; S/P(y0=0) = -0.1250)   true - wrong_constant = +0.1000 (+0.6 sigma)
+  decohered_e2       : S = +0.0000 +- 0.1061  (ideal +0.0000, 40 shots; S/P(y0=0) = +0.0000)   true - decohered_e2 = +0.0500 (+0.3 sigma)
+  classical_exponent : S = -0.1000 +- 0.1265  (ideal +0.0000, 40 shots; S/P(y0=0) = -0.1538)   true - classical_exponent = +0.1500 (+0.9 sigma)
+  Secondary (not used for the verdict): visibility v and 2 ln LR (v P_ideal + (1-v) U against U); overlap sum sqrt(p_obs p_ideal)
+    true                true: v=0.167 2lnLR=  0.2 ov=0.9737 | mult_by_1: v=0.200 2lnLR=  1.6 ov=0.7732 | uniform: v=0.000 2lnLR=  0.0 ov=0.9864
+    mult_by_1           true: v=0.600 2lnLR=  1.8 ov=0.9858 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.6890 | uniform: v=0.000 2lnLR=  0.0 ov=0.9819
+    wrong_constant      true: v=0.000 2lnLR= -0.0 ov=0.9675 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.6299 | uniform: v=0.000 2lnLR=  0.0 ov=0.9900
+    decohered_e2        true: v=0.000 2lnLR= -0.0 ov=0.9639 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.6698 | uniform: v=0.000 2lnLR=  0.0 ov=0.9801
+    classical_exponent  true: v=0.000 2lnLR= -0.0 ov=0.9469 | mult_by_1: v=0.300 2lnLR=  3.7 ov=0.7972 | uniform: v=0.000 2lnLR=  0.0 ov=0.9764
+  VERDICT: NO SIGNIFICANT SIGNAL (smallest difference at -0.6 sigma)
+
+DRY RUN (projection): 120 noisy trajectories per witness, 400 for the true circuit, scales [1.0, 1.5]
+  s=1.0  [true               ] S = +0.0310 +- 0.0043 (trajectories)  ESP=0.146  P(y) = [0.1336 0.1244 0.1181 0.124  0.1335 0.1245 0.118  0.1239]  [449 s]
+  s=1.0  [mult_by_1          ] S = -0.0021 +- 0.0024 (trajectories)  ESP=0.147  P(y) = [0.1446 0.1053 0.1459 0.105  0.1447 0.1044 0.1456 0.1046]  [105 s]
+  s=1.0  [wrong_constant     ] S = -0.0001 +- 0.0012 (trajectories)  ESP=0.146  P(y) = [0.1259 0.1244 0.1256 0.1238 0.1253 0.1244 0.1258 0.1248]  [114 s]
+  s=1.0  [decohered_e2       ] S = +0.0019 +- 0.0018 (trajectories)  ESP=0.143  P(y) = [0.125  0.1242 0.1243 0.1254 0.126  0.1253 0.1247 0.125 ]  [116 s]
+  s=1.0  [classical_exponent ] S = +0.0000 +- 0.0000 (trajectories)  ESP=0.123  P(y) = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]  [117 s]
+  s=1.0: expected significance with the plan: mult_by_1 7.7, wrong_constant 7.6, decohered_e2 7.1, classical_exponent 7.6  -> min 7.1 sigma (+- 1.0 from the trajectory error of S(true))
+  s=1.5  [true               ] S = +0.0115 +- 0.0026 (trajectories)  ESP=0.056  P(y) = [0.1279 0.1247 0.1222 0.1245 0.1284 0.1253 0.1226 0.1244]  [367 s]
+  s=1.5  [mult_by_1          ] S = +0.0018 +- 0.0022 (trajectories)  ESP=0.057  P(y) = [0.1348 0.1154 0.1337 0.1159 0.135  0.1151 0.1343 0.1157]  [111 s]
+  s=1.5  [wrong_constant     ] S = +0.0014 +- 0.0023 (trajectories)  ESP=0.056  P(y) = [0.1261 0.1251 0.1252 0.1243 0.1254 0.1245 0.1248 0.1247]  [115 s]
+  s=1.5  [decohered_e2       ] S = +0.0004 +- 0.0030 (trajectories)  ESP=0.055  P(y) = [0.1246 0.1249 0.1254 0.1257 0.1255 0.125  0.1244 0.1245]  [115 s]
+  s=1.5  [classical_exponent ] S = -0.0000 +- 0.0000 (trajectories)  ESP=0.044  P(y) = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]  [124 s]
+  s=1.5: expected significance with the plan: mult_by_1 2.3, wrong_constant 2.5, decohered_e2 2.7, classical_exponent 2.8  -> min 2.3 sigma (+- 0.6 from the trajectory error of S(true))
+
+-- projected analysis, error scale 1.0 (one multinomial sample of the plan) --
+
+=== Analysis: S = P(y in {0, 4}) - P(y in {2, 6}), N=21, a=2, t=3 ===
+  true               : S = +0.0337 +- 0.0023  (ideal +0.2500, 91000 shots; S/P(y0=0) = +0.0674)
+  mult_by_1          : S = -0.0064 +- 0.0036  (ideal +0.0000, 45000 shots; S/P(y0=0) = -0.0110)   true - mult_by_1 = +0.0401 (+9.3 sigma)
+  wrong_constant     : S = +0.0011 +- 0.0034  (ideal +0.0000, 45000 shots; S/P(y0=0) = +0.0022)   true - wrong_constant = +0.0326 (+8.0 sigma)
+  decohered_e2       : S = +0.0057 +- 0.0033  (ideal +0.0000, 45000 shots; S/P(y0=0) = +0.0115)   true - decohered_e2 = +0.0279 (+6.9 sigma)
+  classical_exponent : S = +0.0014 +- 0.0033  (ideal +0.0000, 45000 shots; S/P(y0=0) = +0.0029)   true - classical_exponent = +0.0322 (+7.9 sigma)
+  Secondary (not used for the verdict): visibility v and 2 ln LR (v P_ideal + (1-v) U against U); overlap sum sqrt(p_obs p_ideal)
+    true                true: v=0.135 2lnLR=206.7 ov=0.9871 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.7061 | uniform: v=0.000 2lnLR=  0.0 ov=0.9997
+    mult_by_1           true: v=0.000 2lnLR= -0.0 ov=0.9772 | mult_by_1: v=0.168 2lnLR=1281.6 ov=0.7643 | uniform: v=0.000 2lnLR=  0.0 ov=0.9964
+    wrong_constant      true: v=0.004 2lnLR=  0.1 ov=0.9830 | mult_by_1: v=0.011 2lnLR=  5.4 ov=0.7110 | uniform: v=0.000 2lnLR=  0.0 ov=1.0000
+    decohered_e2        true: v=0.023 2lnLR=  3.0 ov=0.9837 | mult_by_1: v=0.000 2lnLR=  0.0 ov=0.7072 | uniform: v=0.000 2lnLR=  0.0 ov=1.0000
+    classical_exponent  true: v=0.006 2lnLR=  0.2 ov=0.9832 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.7055 | uniform: v=0.000 2lnLR=  0.0 ov=1.0000
+  VERDICT: SIGNAL: the true circuit exceeds every witness by >= 3 sigma
+
+-- projected analysis, error scale 1.5 (one multinomial sample of the plan) --
+
+=== Analysis: S = P(y in {0, 4}) - P(y in {2, 6}), N=21, a=2, t=3 ===
+  true               : S = +0.0158 +- 0.0023  (ideal +0.2500, 91000 shots; S/P(y0=0) = +0.0316)
+  mult_by_1          : S = +0.0016 +- 0.0035  (ideal +0.0000, 45000 shots; S/P(y0=0) = +0.0030)   true - mult_by_1 = +0.0142 (+3.4 sigma)
+  wrong_constant     : S = -0.0038 +- 0.0033  (ideal +0.0000, 45000 shots; S/P(y0=0) = -0.0077)   true - wrong_constant = +0.0196 (+4.8 sigma)
+  decohered_e2       : S = -0.0025 +- 0.0033  (ideal +0.0000, 45000 shots; S/P(y0=0) = -0.0050)   true - decohered_e2 = +0.0183 (+4.5 sigma)
+  classical_exponent : S = +0.0028 +- 0.0033  (ideal +0.0000, 45000 shots; S/P(y0=0) = +0.0057)   true - classical_exponent = +0.0130 (+3.2 sigma)
+  Secondary (not used for the verdict): visibility v and 2 ln LR (v P_ideal + (1-v) U against U); overlap sum sqrt(p_obs p_ideal)
+    true                true: v=0.063 2lnLR= 45.4 ov=0.9849 | mult_by_1: v=0.001 2lnLR=  0.1 ov=0.7073 | uniform: v=0.000 2lnLR=  0.0 ov=0.9999
+    mult_by_1           true: v=0.006 2lnLR=  0.2 ov=0.9819 | mult_by_1: v=0.071 2lnLR=230.0 ov=0.7319 | uniform: v=0.000 2lnLR=  0.0 ov=0.9993
+    wrong_constant      true: v=0.000 2lnLR= -0.0 ov=0.9825 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.7066 | uniform: v=0.000 2lnLR=  0.0 ov=1.0000
+    decohered_e2        true: v=0.000 2lnLR= -0.0 ov=0.9826 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.7060 | uniform: v=0.000 2lnLR=  0.0 ov=1.0000
+    classical_exponent  true: v=0.011 2lnLR=  0.7 ov=0.9834 | mult_by_1: v=0.000 2lnLR= -0.0 ov=0.7046 | uniform: v=0.000 2lnLR=  0.0 ov=1.0000
+  VERDICT: SIGNAL: the true circuit exceeds every witness by >= 3 sigma
+
+Pre-registration written: data/2026-10-27_ibm_kingston_arith/prereg_arith.json

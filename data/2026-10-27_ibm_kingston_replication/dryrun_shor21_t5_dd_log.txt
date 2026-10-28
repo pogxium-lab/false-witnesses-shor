@@ -1,0 +1,34 @@
+Backend/calibration: experiences/2026-10-27_kingston_replication/calibration_prereg.json
+N=21, a=2, t=5, physical line (19 qubits): [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44, 43, 42]
+  true_DD                  CZ=1538 (+0 conditional)  X= 505  added: +11 barrier, +1215 delay, +462 x duration~78.2 us  ESP=0.0016 (without DD 0.0026)  ideal C2 success=0.2008 (random 0.0625)
+  classical_exponent_DD    CZ=1538 (+0 conditional)  X= 510  added: +11 barrier, +1213 delay, +468 x duration~80.5 us  ESP=0.0014 (without DD 0.0022)  ideal C2 success=0.0625 (random 0.0625)
+  decohered_e2_DD          CZ=1538 (+0 conditional)  X= 483  added: +10 barrier, +1183 delay, +440 x duration~78.2 us  ESP=0.0016 (without DD 0.0025)  ideal C2 success=0.1087 (random 0.0625)
+  decohered_e3_DD          CZ=1538 (+0 conditional)  X= 481  added: +10 barrier, +1176 delay, +440 x duration~78.3 us  ESP=0.0016 (without DD 0.0026)  ideal C2 success=0.1277 (random 0.0625)
+  decohered_e4_DD          CZ=1538 (+0 conditional)  X= 484  added: +10 barrier, +1182 delay, +440 x duration~78.2 us  ESP=0.0016 (without DD 0.0026)  ideal C2 success=0.1478 (random 0.0625)
+  scrambled_constants_DD   CZ=1540 (+0 conditional)  X= 499  added: +11 barrier, +1170 delay, +458 x duration~77.7 us  ESP=0.0017 (without DD 0.0027)  ideal C2 success=0.0945 (random 0.0625)
+Plan: {'true_DD': 50900, 'classical_exponent_DD': 23700, 'decohered_e2_DD': 23700, 'decohered_e3_DD': 23700, 'decohered_e4_DD': 23700, 'scrambled_constants_DD': 23700} -> 169400 shots, estimated QPU time 68.5 s (budget 70 s)
+ISA check (calibration target): all circuits valid
+Circuits without DD identical to the reference job: {'true_DD': True, 'classical_exponent_DD': True, 'decohered_e2_DD': True, 'decohered_e3_DD': True, 'decohered_e4_DD': True, 'scrambled_constants_DD': True}
+ISA check (live target): all circuits valid
+Gate durations changed (live vs calibration): none
+Line rule on the live target: [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44, 43, 42] (same)
+
+Exactness (noiseless exact simulation of the dynamic circuits):
+  true_DD                  max|P - P_model| = 1.1e-09  max|P - P_without_DD| = 6.9e-17  C2 success = 0.2008 (model 0.2008)  [12 s]
+  classical_exponent_DD    max|P - P_model| = 1.0e-15  max|P - P_without_DD| = 1.4e-17  C2 success = 0.0625 (model 0.0625)  [399 s]
+  decohered_e2_DD          max|P - P_model| = 1.6e-09  max|P - P_without_DD| = 2.8e-17  C2 success = 0.1087 (model 0.1087)  [27 s]
+  decohered_e3_DD          max|P - P_model| = 1.4e-09  max|P - P_without_DD| = 4.2e-17  C2 success = 0.1277 (model 0.1277)  [26 s]
+  decohered_e4_DD          max|P - P_model| = 7.3e-10  max|P - P_without_DD| = 4.2e-17  C2 success = 0.1478 (model 0.1478)  [25 s]
+  scrambled_constants_DD   max|P - P_model| = 2.5e-09  max|P - P_without_DD| = 2.1e-17  C2 success = 0.0945 (model 0.0945)  [13 s]
+
+Standard noise model: 40 trajectories per control, 100 for the true circuit, scales [1.0]
+  s=1.0  [true_DD                 ] C2 success = 0.06301 +- 0.00061 (trajectories; ideal 0.2008)  ESP(model) = 0.0067  [820 s]
+  s=1.0  [classical_exponent_DD   ] C2 success = 0.06249 +- 0.00003 (trajectories; ideal 0.0625)  ESP(model) = 0.0057  [341 s]
+  s=1.0  [decohered_e2_DD         ] C2 success = 0.06264 +- 0.00072 (trajectories; ideal 0.1087)  ESP(model) = 0.0065  [340 s]
+  s=1.0  [decohered_e3_DD         ] C2 success = 0.06251 +- 0.00062 (trajectories; ideal 0.1277)  ESP(model) = 0.0067  [322 s]
+  s=1.0  [decohered_e4_DD         ] C2 success = 0.06394 +- 0.00120 (trajectories; ideal 0.1478)  ESP(model) = 0.0067  [327 s]
+  s=1.0  [scrambled_constants_DD  ] C2 success = 0.06234 +- 0.00055 (trajectories; ideal 0.0945)  ESP(model) = 0.0069  [324 s]
+  s=1.0: expected significance: classical_exponent_DD +0.27, decohered_e2_DD +0.19, decohered_e3_DD +0.26, decohered_e4_DD -0.48, scrambled_constants_DD +0.35, random +0.47 -> min -0.48; probability that the rule is met 0.000
+Circuits saved: experiences\2026-10-27_kingston_replication\prereg_shor21_t5_dd_circuits.qpy (order ['true_DD', 'classical_exponent_DD', 'decohered_e2_DD', 'decohered_e3_DD', 'decohered_e4_DD', 'scrambled_constants_DD'])
+
+Pre-registration written: experiences/2026-10-27_kingston_replication/prereg_shor21_t5_dd.json

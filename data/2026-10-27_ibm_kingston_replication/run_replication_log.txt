@@ -1,0 +1,31 @@
+Pre-registration sha256 3b2ad7bc133e8e1c3bbd6a8deec12dcc17c6c286d8e8a94b973cf35520404538; circuits sha256 fec583977c1c00dcd4593ea4f74e30e1060fc7b22dcb6fb2e9ba43f7098617ec (matches the pre-registration and SHA256SUMS.txt); time-stamp proofs present: {'prereg_replication.json': True, 'prereg_replication_circuits.qpy': True}
+ESP below: today's live calibration, pre-registered circuits
+Backend/calibration: ibm_kingston
+N=21, a=2, t=3, physical line (17 qubits): [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]
+  true_DD                CZ= 585 (+0 conditional)  X= 211  added: +9 barrier, +514 delay, +200 x duration~32.6 us  ESP=0.0853  ideal S=+0.2500
+  mult_by_1_DD           CZ= 587 (+0 conditional)  X= 210  added: +9 barrier, +472 delay, +200 x duration~32.4 us  ESP=0.0865  ideal S=+0.0000
+  wrong_constant_DD      CZ= 585 (+0 conditional)  X= 208  added: +9 barrier, +513 delay, +198 x duration~32.6 us  ESP=0.0855  ideal S=+0.0000
+  classical_exponent_DD  CZ= 585 (+0 conditional)  X= 213  added: +9 barrier, +515 delay, +202 x duration~34.8 us  ESP=0.0742  ideal S=+0.0000
+Plan: {'true_DD': 65300, 'mult_by_1_DD': 41900, 'wrong_constant_DD': 36700, 'classical_exponent_DD': 36500} -> 180400 shots, estimated QPU time 60.0 s (budget 60 s)
+  exactness true_DD                max|P - P_ideal| = 2.7e-09
+  exactness mult_by_1_DD           max|P - P_ideal| = 3.0e-15
+  exactness wrong_constant_DD      max|P - P_ideal| = 2.6e-09
+  exactness classical_exponent_DD  max|P - P_ideal| = 1.5e-15
+ISA check (live target): all circuits valid
+Job tags: ['prereg_sha256:3b2ad7bc133e8e1c3bbd6a8deec12dcc17c6c286d8e8a94b973cf35520404538']
+Job submitted: dbgi0bkdgr2s73cri510 (read back: --ibm --job dbgi0bkdgr2s73cri510 --outdir data\2026-10-27_ibm_kingston_replication)
+
+=== Analysis (replication): S = P(y in {0, 4}) - P(y in {2, 6}), N=21, a=2, t=3, dynamical decoupling ===
+  true_DD               : S = +0.0217 +- 0.0028  (ideal +0.2500, 65300 shots; S/P(y0=0) = +0.0426; P(y0=0) = 0.5085)
+  mult_by_1_DD          : S = -0.0058 +- 0.0037  (ideal +0.0000, 41900 shots; S/P(y0=0) = -0.0100; P(y0=0) = 0.5856)
+  wrong_constant_DD     : S = -0.0013 +- 0.0037  (ideal +0.0000, 36700 shots; S/P(y0=0) = -0.0026; P(y0=0) = 0.5078)
+  classical_exponent_DD : S = -0.0050 +- 0.0037  (ideal +0.0000, 36500 shots; S/P(y0=0) = -0.0100; P(y0=0) = 0.5065)
+    true_DD - mult_by_1_DD           = +0.0275 (+5.9 sigma)
+    true_DD - wrong_constant_DD      = +0.0230 (+4.9 sigma)
+    true_DD - classical_exponent_DD  = +0.0267 (+5.7 sigma)
+    true_DD - first DD run   = +0.0027 (+0.7 sigma); inverse-variance mean of both runs +0.0202 +- 0.0019 (reported, not used for the verdict)
+    fit true_DD            v = 0.0856 +- 0.0110  phase = -5.5 +- 7.5 deg  2lnLR = 60.8
+    fit mult_by_1_DD       v cos(phase) = +0.1712 +- 0.0048  2lnLR = 1234.4
+  PRIMARY VERDICT: SIGNAL REPLICATED: S(true_DD) > 0 and exceeds every DD witness by >= 3 sigma
+circuits archived: 4
+archived: data\2026-10-27_ibm_kingston_replication\job_dbgi0bkdgr2s73cri510.json | execution: {'created': '2026-10-27T22:05:34.330948Z', 'finished': '2026-10-27T22:14:36.630997Z', 'running': '2026-10-27T22:13:15.395636Z'} | QPU: {'qpu_charge_time_seconds': 55, 'value': 0.912962, 'unit': 'resource_units', 'status': 'complete', 'details': [{'value': 0.912962, 'unit': 'resource_units', 'metric': {'id': 'caffe3ca-729c-5750-8777-df63bbf8bfd9', 'value': 55}}]}

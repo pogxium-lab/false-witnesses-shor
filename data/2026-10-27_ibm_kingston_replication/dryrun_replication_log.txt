@@ -1,0 +1,29 @@
+Backend/calibration: experiences/2026-10-27_kingston_replication/calibration_prereg.json
+N=21, a=2, t=3, physical line (17 qubits): [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]
+  true_DD                CZ= 585 (+0 conditional)  X= 211  added: +9 barrier, +514 delay, +200 x duration~32.6 us  ESP=0.0853  ideal S=+0.2500
+  mult_by_1_DD           CZ= 587 (+0 conditional)  X= 210  added: +9 barrier, +472 delay, +200 x duration~32.4 us  ESP=0.0865  ideal S=+0.0000
+  wrong_constant_DD      CZ= 585 (+0 conditional)  X= 208  added: +9 barrier, +513 delay, +198 x duration~32.6 us  ESP=0.0855  ideal S=+0.0000
+  classical_exponent_DD  CZ= 585 (+0 conditional)  X= 213  added: +9 barrier, +515 delay, +202 x duration~34.8 us  ESP=0.0742  ideal S=+0.0000
+Plan: {'true_DD': 65300, 'mult_by_1_DD': 41900, 'wrong_constant_DD': 36700, 'classical_exponent_DD': 36500} -> 180400 shots, estimated QPU time 60.0 s (budget 60 s)
+ISA check (calibration target): all circuits valid
+Gate durations changed since the source calibration (line qubits): none
+ISA check (live target): all circuits valid
+Gate durations changed (live vs source calibration): none
+
+Exactness (noiseless exact simulation of the dynamic circuits):
+  true_DD                max|P - P_model| = 2.7e-09  max|P - P_without_DD| = 8.3e-17  S = +0.250000  P = [0.1875 0.125  0.0625 0.125  0.1875 0.125  0.0625 0.125 ]
+  mult_by_1_DD           max|P - P_model| = 3.0e-15  max|P - P_without_DD| = 1.1e-16  S = +0.000000  P = [0.25 0.   0.25 0.   0.25 0.   0.25 0.  ]
+  wrong_constant_DD      max|P - P_model| = 2.6e-09  max|P - P_without_DD| = 5.6e-17  S = +0.000000  P = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]
+  classical_exponent_DD  max|P - P_model| = 1.5e-15  max|P - P_without_DD| = 5.6e-17  S = -0.000000  P = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]
+
+Predictions with the plan:
+  data-based (visibility 0.0762 +- 0.0106): S(true_DD) = +0.0191  z = mult_by_1_DD +4.12, wrong_constant_DD +4.12, classical_exponent_DD +4.12  -> min +4.12; P(rule met) = 0.70 (fixed S), 0.67 (v uncertain)
+  data-based (observed S(true_DD) = +0.0189 +- 0.0027): z min +4.09; P(rule met) = 0.66 (S uncertain)
+  s=1.0  [true_DD               ] S = +0.0345 +- 0.0050 (trajectories)  P(y) = [0.134  0.1247 0.1168 0.1238 0.1342 0.125  0.117  0.1244]  [294 s]
+  s=1.0  [mult_by_1_DD          ] S = -0.0025 +- 0.0028 (trajectories)  P(y) = [0.1487 0.101  0.1504 0.1008 0.1489 0.1002 0.1498 0.1003]  [100 s]
+  s=1.0  [wrong_constant_DD     ] S = +0.0000 +- 0.0015 (trajectories)  P(y) = [0.1265 0.1241 0.1259 0.1233 0.1257 0.1239 0.1263 0.1244]  [111 s]
+  s=1.0  [classical_exponent_DD ] S = +0.0000 +- 0.0000 (trajectories)  P(y) = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]  [113 s]
+  standard model: S = true_DD +0.0328, mult_by_1_DD -0.0024, wrong_constant_DD +0.0000, classical_exponent_DD +0.0000  z min +7.08; P(rule met) 0.99
+Circuits saved: experiences\2026-10-27_kingston_replication\prereg_replication_circuits.qpy (order ['true_DD', 'mult_by_1_DD', 'wrong_constant_DD', 'classical_exponent_DD'])
+
+Pre-registration written: experiences/2026-10-27_kingston_replication/prereg_replication.json

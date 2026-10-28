@@ -1,0 +1,157 @@
+{
+ "job_id": "dbgs2e8te5oc738irid0",
+ "backend": "ibm_kingston",
+ "status": "DONE",
+ "created": "2026-10-28 10:32:42.085260+01:00",
+ "metrics": {
+  "caller": "qiskit_ibm_runtime~sampler.py",
+  "qiskit_version": "qiskit_ibm_runtime-0.51.0,qiskit-2.6.1*,qiskit_aer-0.18.2",
+  "timestamps": {
+   "created": "2026-10-28T09:32:42.08526Z",
+   "finished": "2026-10-28T09:34:09.104692Z",
+   "running": "2026-10-28T09:32:43.348703Z"
+  },
+  "usage": {
+   "qpu_charge_time_seconds": 62,
+   "value": 1.023035,
+   "unit": "resource_units",
+   "status": "complete",
+   "details": [
+    {
+     "value": 1.023035,
+     "unit": "resource_units",
+     "metric": {
+      "id": "caffe3ca-729c-5750-8777-df63bbf8bfd9",
+      "value": 62
+     }
+    }
+   ]
+  },
+  "circuits_execution_time_ns": 59670827264
+ },
+ "estimated_usage": {
+  "quantum_seconds": 71.209476844
+ },
+ "circuits": [
+  {
+   "index": 0,
+   "registers": {
+    "k1": {
+     "0": 34126,
+     "1": 34674
+    },
+    "y": {
+     "10": 16642,
+     "01": 17179,
+     "11": 17144,
+     "00": 17835
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  },
+  {
+   "index": 1,
+   "registers": {
+    "k1": {
+     "1": 17273,
+     "0": 17127
+    },
+    "y": {
+     "10": 8578,
+     "11": 8476,
+     "01": 8685,
+     "00": 8661
+    },
+    "dec": {
+     "10": 8855,
+     "00": 8848,
+     "11": 8280,
+     "01": 8417
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  },
+  {
+   "index": 2,
+   "registers": {
+    "k1": {
+     "1": 17432,
+     "0": 16968
+    },
+    "y": {
+     "01": 8724,
+     "11": 8493,
+     "00": 8679,
+     "10": 8504
+    },
+    "dec": {
+     "0": 17168,
+     "1": 17232
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  },
+  {
+   "index": 3,
+   "registers": {
+    "k1": {
+     "1": 17376,
+     "0": 17024
+    },
+    "y": {
+     "01": 7724,
+     "10": 9390,
+     "00": 9688,
+     "11": 7598
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  },
+  {
+   "index": 4,
+   "registers": {
+    "k1": {
+     "1": 17334,
+     "0": 17066
+    },
+    "y": {
+     "10": 8666,
+     "00": 8651,
+     "11": 8527,
+     "01": 8556
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  }
+ ]
+}

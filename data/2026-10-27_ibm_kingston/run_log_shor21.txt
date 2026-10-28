@@ -1,0 +1,23 @@
+# English rendering of the console output recorded during the run; numerical content unchanged.
+Device: ibm_kingston (hardware run)
+N=21, a=2, t=5, physical line: (54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44, 43, 42)
+  true                 CZ=1538  duration~73 us  ESP(calib.)=0.003  ideal success=0.2008 (random 0.0625)
+  classical_exponent   CZ=1538  duration~75 us  ESP(calib.)=0.002  ideal success=0.0625 (random 0.0625)
+  decohered_e2         CZ=1538  duration~73 us  ESP(calib.)=0.003  ideal success=0.1087 (random 0.0625)
+  decohered_e3         CZ=1538  duration~73 us  ESP(calib.)=0.003  ideal success=0.1277 (random 0.0625)
+  decohered_e4         CZ=1538  duration~73 us  ESP(calib.)=0.003  ideal success=0.1478 (random 0.0625)
+  scrambled_constants  CZ=1540  duration~72 us  ESP(calib.)=0.003  ideal success=0.0945 (random 0.0625)
+Plan: {'true': 60000, 'classical_exponent': 27999, 'decohered_e2': 27999, 'decohered_e3': 27999, 'decohered_e4': 27999, 'scrambled_constants': 27999}  -> estimated QPU time 78 s
+Job submitted: dbgb58djm0ks73eg9aig (read back: --ibm --job dbgb58djm0ks73eg9aig)
+
+=== Analysis (criterion C2 'exact order', N=21, t=5) ===
+  uniform random: 0.0625
+  true                : 0.0621 ± 0.0010  (60000 shots)
+  classical_exponent  : 0.0633 ± 0.0015  (27999 shots)   true − classical_exponent = -0.0012  (-0.7 σ)
+  decohered_e2        : 0.0620 ± 0.0014  (27999 shots)   true − decohered_e2 = +0.0000  (+0.0 σ)
+  decohered_e3        : 0.0614 ± 0.0014  (27999 shots)   true − decohered_e3 = +0.0007  (+0.4 σ)
+  decohered_e4        : 0.0619 ± 0.0014  (27999 shots)   true − decohered_e4 = +0.0002  (+0.1 σ)
+  scrambled_constants : 0.0599 ± 0.0014  (27999 shots)   true − scrambled_constants = +0.0021  (+1.2 σ)
+  true − random = -0.0004 (-0.4 σ)
+  (for information, strict criterion C1: true 0.0621, classical_exponent 0.0633, decohered_e2 0.0620, decohered_e3 0.0614, decohered_e4 0.0619, scrambled_constants 0.0599; NOT used for the verdict)
+  VERDICT: NO SIGNIFICANT SIGNAL (worst difference at -0.7 σ)

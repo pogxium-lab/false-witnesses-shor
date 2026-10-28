@@ -1,0 +1,20 @@
+ESP below: today's live calibration, pre-registered circuit
+Backend/calibration: ibm_kingston
+N=21, m=3, w=8, v=1, +13 x 2 (1 + 26 = 6 + 21: one overflow); 12 logical qubits, 133 CZ, duration ~10.1 us, ESP 0.615
+  physical qubits [144, 124, 125, 123, 136, 143, 122, 117, 105, 106, 107, 97]  (c = 144, J = [124, 125, 123], R = [136, 143, 122, 117, 105, 106, 107, 97]), transpiler seed 11
+Plan: {'uniform': 66000, 'sine': 66000, 'middle_pair': 16000, 'edge_pair': 16000, 'sine_no_translation': 16000} -> 180000 shots, estimated QPU time 57.7 s (budget 60 s)
+Job submitted: dbgeesljm0ks73egfmc0 (read back: --ibm --job dbgeesljm0ks73egfmc0 --outdir data\2026-10-27_ibm_kingston_arith)
+
+=== Sine versus uniform window, coset N=21 (w=8, M=8), Hadamard test of T_N ===
+  uniform              <X_c> = +0.5364 +- 0.0033   (ideal 0.8750, 66000 shots)
+  sine                 <X_c> = +0.5683 +- 0.0032   (ideal 0.9397, 66000 shots)
+  middle_pair          <X_c> = +0.3036 +- 0.0075   (ideal 0.5000, 16000 shots)
+  edge_pair            <X_c> = +0.0311 +- 0.0079   (ideal 0.0000, 16000 shots)
+  sine_no_translation  <X_c> = +0.7698 +- 0.0050   (ideal 1.0000, 16000 shots)
+  D = sine - uniform = +0.0319 +- 0.0046  (+7.0 sigma; ideal +0.0647)
+  offset-corrected ratio (Xs - Xe)/(Xu - Xe) = 1.0632 +- 0.0247  (theory 1.0739; no window effect: 1; +2.6 sigma from 1, -0.4 sigma from theory)
+  fit <X_c> = eta A + delta: eta = 0.5789 +- 0.0084, delta = +0.0263 +- 0.0071, chi2 = 4.5 (2 dof)
+  sine_no_translation (attenuation of the test without c-T_N): 0.7698
+  VERDICT: WINDOW EFFECT OBSERVED: sine - uniform >= 3 sigma
+circuits archived: 2
+archived: data\2026-10-27_ibm_kingston_arith\job_dbgeesljm0ks73egfmc0.json | execution: {'created': '2026-10-27T18:03:30.371079Z', 'finished': '2026-10-27T18:09:12.161753Z', 'running': '2026-10-27T18:03:31.699265Z'} | QPU: {'qpu_charge_time_seconds': 51, 'value': 0.83564, 'unit': 'resource_units', 'status': 'complete', 'details': [{'value': 0.83564, 'unit': 'resource_units', 'metric': {'id': 'caffe3ca-729c-5750-8777-df63bbf8bfd9', 'value': 51}}]}

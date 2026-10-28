@@ -1,0 +1,23 @@
+# English rendering of the console output recorded during the run; numerical content unchanged.
+Device: ibm_kingston (hardware run)
+  [an] addition echo +3K/-3K with carry propagation, w=5 + 4 carries; CZ [99, 91, 99, 91], ESP 0.789
+         16000 shots, estimated QPU time 6 s (preparation 3 s)
+
+Total estimated QPU time: 6 s
+[an] job submitted: dbg9q25jm0ks73eg6hc0  (read back: --ibm --job dbg9q25jm0ks73eg6hc0)
+
+=== AN demo: AN code (x3) + carry-uncomputation check (Nelson et al.) ===
+  v=2,K=7   raw 0.463 (kept 1.00) | AN 0.826 (kept 0.56) | carries 0.642 (kept 0.54) | AN+carries 0.921 (kept 0.38)
+  v=1,K=6   raw 0.465 (kept 1.00) | AN 0.834 (kept 0.56) | carries 0.599 (kept 0.61) | AN+carries 0.914 (kept 0.40)
+  v=4,K=5   raw 0.474 (kept 1.00) | AN 0.861 (kept 0.55) | carries 0.647 (kept 0.55) | AN+carries 0.965 (kept 0.37)
+  v=3,K=4   raw 0.462 (kept 1.00) | AN 0.853 (kept 0.54) | carries 0.621 (kept 0.61) | AN+carries 0.936 (kept 0.40)
+  Total:
+    raw          success 0.466 ± 0.004   kept shots 1.00   residual error 0.534
+    AN           success 0.843 ± 0.004   kept shots 0.55   residual error 0.157
+    carries      success 0.626 ± 0.005   kept shots 0.58   residual error 0.374
+    AN+carries   success 0.934 ± 0.003   kept shots 0.39   residual error 0.066
+    errors removed by 'AN': 71 %
+    errors removed by 'carries': 30 %
+    errors removed by 'AN+carries': 88 %
+  Note: classical inputs -> only X-type errors (bit flips) are visible; the AN and carry checks are blind to phase errors.
+  QPU time used: 7 s

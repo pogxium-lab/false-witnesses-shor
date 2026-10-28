@@ -1,0 +1,59 @@
+{
+ "experiment": "shor_N21_a2_t5_dd",
+ "N": 21,
+ "a": 2,
+ "t": 5,
+ "order": [
+  "true_DD",
+  "classical_exponent_DD",
+  "decohered_e2_DD",
+  "decohered_e3_DD",
+  "decohered_e4_DD",
+  "scrambled_constants_DD"
+ ],
+ "plan": {
+  "true_DD": 50900,
+  "classical_exponent_DD": 23700,
+  "decohered_e2_DD": 23700,
+  "decohered_e3_DD": 23700,
+  "decohered_e4_DD": 23700,
+  "scrambled_constants_DD": 23700
+ },
+ "backend": "ibm_kingston",
+ "physical_line": [
+  54,
+  55,
+  59,
+  75,
+  74,
+  73,
+  72,
+  71,
+  70,
+  69,
+  68,
+  67,
+  57,
+  47,
+  46,
+  45,
+  44,
+  43,
+  42
+ ],
+ "cz": {
+  "true_DD": 1538,
+  "classical_exponent_DD": 1538,
+  "decohered_e2_DD": 1538,
+  "decohered_e3_DD": 1538,
+  "decohered_e4_DD": 1538,
+  "scrambled_constants_DD": 1540
+ },
+ "prereg": "data/2026-10-27_ibm_kingston_replication/prereg_shor21_t5_dd.json",
+ "prereg_sha256": "95323217f5625d445487b2a27aff48051dd9fe790b91e0d7766c491fe8a54ae6",
+ "job_tags": [
+  "prereg_sha256:95323217f5625d445487b2a27aff48051dd9fe790b91e0d7766c491fe8a54ae6"
+ ],
+ "date": "2026-10-27T23:19:29",
+ "qpu_estimate_s": 68.48867800000018
+}

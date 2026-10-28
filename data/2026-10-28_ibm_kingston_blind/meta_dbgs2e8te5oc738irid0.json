@@ -1,0 +1,55 @@
+{
+ "experiment": "blind_arith_N21",
+ "N": 21,
+ "a": 16,
+ "t": 2,
+ "order": [
+  "true",
+  "classical_exponent",
+  "decohered_control",
+  "mult_by_1",
+  "wrong_constant"
+ ],
+ "plan": {
+  "true": 68800,
+  "classical_exponent": 34400,
+  "decohered_control": 34400,
+  "mult_by_1": 34400,
+  "wrong_constant": 34400
+ },
+ "backend": "ibm_kingston",
+ "physical_line": [
+  59,
+  75,
+  74,
+  73,
+  72,
+  71,
+  70,
+  69,
+  68,
+  67,
+  57,
+  47,
+  46,
+  45,
+  44
+ ],
+ "cz": {
+  "true": 545,
+  "classical_exponent": 545,
+  "decohered_control": 545,
+  "mult_by_1": 547,
+  "wrong_constant": 545
+ },
+ "prereg": "prereg_blind.json",
+ "prereg_sha256": "b278b9919af9919e8ef38b11d7d59c97939c4ed2a06590c90c2000c89b43a961",
+ "draw": "blind_draw.json",
+ "draw_sha256": "7a547fb2d0172c99b7c8ca74de3e07c5f35f6eb08180b68f5d4aa8e4529a3e5b",
+ "job_tags": [
+  "prereg_sha256:b278b9919af9919e8ef38b11d7d59c97939c4ed2a06590c90c2000c89b43a961",
+  "draw_sha256:7a547fb2d0172c99b7c8ca74de3e07c5f35f6eb08180b68f5d4aa8e4529a3e5b"
+ ],
+ "date": "2026-10-28T09:32:41+00:00",
+ "qpu_estimate_s": 68.52348160000001
+}

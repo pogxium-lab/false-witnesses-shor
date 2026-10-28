@@ -1,0 +1,116 @@
+{
+ "local_time_utc": "2026-10-28T08:51:30+00:00",
+ "tsa_url": "https://freetsa.org/tsr",
+ "tsa_certificates": {
+  "cacert.pem": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+  "tsa.crt": "8bfb0305bb64e2571ca507552ef3245cb1c2fee8728e0ff8689225081ea13467"
+ },
+ "files": {
+  "prereg_blind.json": {
+   "sha256": "b278b9919af9919e8ef38b11d7d59c97939c4ed2a06590c90c2000c89b43a961",
+   "rfc3161": {
+    "tsr": "prereg_blind.json.tsr",
+    "time": "Oct 28 08:51:32 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "SHA256SUMS.txt": {
+   "sha256": "b095008118ef8aa10d8004e8c4ccadd5662b62f9fdd987ff91e44bf809050623",
+   "rfc3161": {
+    "tsr": "SHA256SUMS.txt.tsr",
+    "time": "Oct 28 08:51:33 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "prereg_blind_circuits_a2.qpy": {
+   "sha256": "73f1b3a5bafebab8a38a22810378065b7fe75d4860ba0353dae833be7a3bac3b",
+   "rfc3161": {
+    "tsr": "prereg_blind_circuits_a2.qpy.tsr",
+    "time": "Oct 28 08:51:33 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "prereg_blind_circuits_a4.qpy": {
+   "sha256": "fbbe3e35ad44bc00cdc0e5a11ba16566b141aa9f36ac4da8a80c4e4afde47e31",
+   "rfc3161": {
+    "tsr": "prereg_blind_circuits_a4.qpy.tsr",
+    "time": "Oct 28 08:51:34 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "prereg_blind_circuits_a8.qpy": {
+   "sha256": "ea787e5525d6a6bfd683a8d164713dbc6a58f05a6b5617bfa5e3108cfc72596e",
+   "rfc3161": {
+    "tsr": "prereg_blind_circuits_a8.qpy.tsr",
+    "time": "Oct 28 08:51:35 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "prereg_blind_circuits_a13.qpy": {
+   "sha256": "523a1e5ac8cece2275169d9876ee3a303eb3bd045972d875fb046051472a8a27",
+   "rfc3161": {
+    "tsr": "prereg_blind_circuits_a13.qpy.tsr",
+    "time": "Oct 28 08:51:35 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "prereg_blind_circuits_a16.qpy": {
+   "sha256": "5fe168baf0e42b56b7b882a31515ce12ecdea55e390fb371fca7b004d336933a",
+   "rfc3161": {
+    "tsr": "prereg_blind_circuits_a16.qpy.tsr",
+    "time": "Oct 28 08:51:36 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "prereg_ramsey.json": {
+   "sha256": "06128542794397e0f0c54aa0edc6f63e012aa7ed9c973567a62a4a5a46dd990e",
+   "rfc3161": {
+    "tsr": "prereg_ramsey.json.tsr",
+    "time": "Oct 28 08:51:36 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  },
+  "prereg_ramsey_circuits.qpy": {
+   "sha256": "c27a56206a87f5e370aa67f7a222ede62aa5d6de0adf23d8c7fbe01213f8551b",
+   "rfc3161": {
+    "tsr": "prereg_ramsey_circuits.qpy.tsr",
+    "time": "Oct 28 08:51:37 2026 GMT",
+    "verify_query": "Verification: OK",
+    "verify_data": "Verification: OK",
+    "ok": true
+   }
+  }
+ },
+ "opentimestamps": {
+  "command": "ots stamp",
+  "returncode": 0,
+  "output": "Submitting to remote calendar https://a.pool.opentimestamps.org\nSubmitting to remote calendar https://b.pool.opentimestamps.org\nSubmitting to remote calendar https://a.pool.eternitywall.com\nSubmitting to remote calendar https://ots.btc.catallaxy.com",
+  "proofs": {
+   "prereg_blind.json": true,
+   "SHA256SUMS.txt": true,
+   "prereg_blind_circuits_a2.qpy": true,
+   "prereg_blind_circuits_a4.qpy": true,
+   "prereg_blind_circuits_a8.qpy": true,
+   "prereg_blind_circuits_a13.qpy": true,
+   "prereg_blind_circuits_a16.qpy": true,
+   "prereg_ramsey.json": true,
+   "prereg_ramsey_circuits.qpy": true
+  }
+ }
+}

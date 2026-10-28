@@ -1,0 +1,155 @@
+{
+ "job_id": "dbg9qfgiudkc73e424jg",
+ "backend": "ibm_kingston",
+ "status": "DONE",
+ "created": "2026-10-27 13:46:54.713502+01:00",
+ "metrics": {
+  "caller": "qiskit_ibm_runtime~sampler.py",
+  "qiskit_version": "qiskit_ibm_runtime-0.51.0,qiskit-2.6.1*,qiskit_aer-0.18.2",
+  "timestamps": {
+   "created": "2026-10-27T12:46:54.713502Z",
+   "finished": "2026-10-27T12:48:05.192505Z",
+   "running": "2026-10-27T12:46:56.086549Z"
+  },
+  "usage": {
+   "qpu_charge_time_seconds": 62,
+   "value": 1.028293,
+   "unit": "resource_units",
+   "status": "complete",
+   "details": [
+    {
+     "value": 1.028293,
+     "unit": "resource_units",
+     "metric": {
+      "id": "caffe3ca-729c-5750-8777-df63bbf8bfd9",
+      "value": 62
+     }
+    }
+   ]
+  },
+  "circuits_execution_time_ns": 59988298496
+ },
+ "estimated_usage": {
+  "quantum_seconds": null
+ },
+ "circuits": [
+  {
+   "index": 0,
+   "registers": {
+    "k1": {
+     "0": 29835,
+     "1": 30165
+    },
+    "y": {
+     "011": 6006,
+     "001": 6133,
+     "100": 9016,
+     "110": 8723,
+     "000": 9090,
+     "101": 6247,
+     "010": 8644,
+     "111": 6141
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  },
+  {
+   "index": 1,
+   "registers": {
+    "k1": {
+     "1": 23619,
+     "0": 23047
+    },
+    "y": {
+     "100": 5964,
+     "101": 5945,
+     "000": 5849,
+     "110": 5982,
+     "011": 5752,
+     "001": 5752,
+     "111": 5710,
+     "010": 5712
+    },
+    "dec": {
+     "111": 5297,
+     "000": 6295,
+     "001": 6181,
+     "100": 5960,
+     "010": 6077,
+     "110": 5474,
+     "011": 5770,
+     "101": 5612
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  },
+  {
+   "index": 2,
+   "registers": {
+    "k1": {
+     "0": 23197,
+     "1": 23469
+    },
+    "y": {
+     "001": 5685,
+     "000": 6021,
+     "010": 5523,
+     "101": 5904,
+     "111": 5716,
+     "011": 5864,
+     "100": 6076,
+     "110": 5877
+    },
+    "dec": {
+     "0": 24098,
+     "1": 22568
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  },
+  {
+   "index": 3,
+   "registers": {
+    "k1": {
+     "0": 23306,
+     "1": 23360
+    },
+    "y": {
+     "001": 5930,
+     "010": 5600,
+     "111": 5566,
+     "100": 6088,
+     "101": 6116,
+     "000": 6005,
+     "110": 5770,
+     "011": 5591
+    }
+   },
+   "metadata": {
+    "circuit_metadata": {},
+    "compilation": {
+     "scheduler_timing": null,
+     "stretch_values": null
+    }
+   }
+  }
+ ]
+}

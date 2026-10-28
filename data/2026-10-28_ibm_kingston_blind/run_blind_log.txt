@@ -1,0 +1,21 @@
+Fingerprint checks: {'prereg in SHA256SUMS': True, 'draw record refers to this prereg': True, 'circuits match draw record': True, 'circuits match pre-registered candidate file': True, 'drawn base pre-registered as testable': True, 'time-stamp proofs present': True}
+ISA check (live target): all circuits valid
+Gate durations changed since the pre-registration (line): none
+a = 16, t = 2, line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]
+Plan {'true': 68800, 'classical_exponent': 34400, 'decohered_control': 34400, 'mult_by_1': 34400, 'wrong_constant': 34400} -> 206400 shots, estimated QPU 68.5 s (budget 70 s)
+Job submitted: dbgs2e8te5oc738irid0 (read back: --ibm --job dbgs2e8te5oc738irid0 --outdir data\2026-10-28_ibm_kingston_blind)
+
+=== Analysis: blind test N = 21, a = 16, t = 2; template P_ideal = [0.3125 0.25   0.1875 0.25  ] ===
+  true                V = +0.1384 +- 0.0215  (68800 shots; P = [0.2592 0.2497 0.2419 0.2492])
+  classical_exponent  V = +0.0193 +- 0.0305  (34400 shots; P = [0.2518 0.2525 0.2494 0.2464])
+  decohered_control   V = +0.0407 +- 0.0305  (34400 shots; P = [0.2523 0.2536 0.2472 0.2469])
+  mult_by_1           V = +0.0625 +- 0.0290  (34400 shots; P = [0.2816 0.2245 0.273  0.2209])
+  wrong_constant      V = -0.0035 +- 0.0304  (34400 shots; P = [0.2515 0.2487 0.2519 0.2479])
+    V_true - V_classical_exponent  = +0.1192 (+3.2 sigma)
+    V_true - V_decohered_control   = +0.0977 (+2.6 sigma)
+    V_true - V_mult_by_1           = +0.0759 (+2.1 sigma)
+    V_true - V_wrong_constant      = +0.1419 (+3.8 sigma)
+  V_true / se = +6.4
+  VERDICT: NO SIGNAL (V_true = +0.1384; smallest discriminating difference +2.1 sigma)
+circuits archived: 5
+archived: data\2026-10-28_ibm_kingston_blind\job_dbgs2e8te5oc738irid0.json | execution: {'created': '2026-10-28T09:32:42.08526Z', 'finished': '2026-10-28T09:34:09.104692Z', 'running': '2026-10-28T09:32:43.348703Z'} | QPU: {'qpu_charge_time_seconds': 62, 'value': 1.023035, 'unit': 'resource_units', 'status': 'complete', 'details': [{'value': 1.023035, 'unit': 'resource_units', 'metric': {'id': 'caffe3ca-729c-5750-8777-df63bbf8bfd9', 'value': 62}}]}

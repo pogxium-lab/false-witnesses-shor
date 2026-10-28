@@ -1,0 +1,4 @@
+# Store every file byte for byte: no line-ending conversion on any platform.
+# The files listed in data/*/SHA256SUMS.txt and the files carrying .ots / .tsr proofs are
+# cryptographically time-stamped and must stay byte-identical.
+* -text

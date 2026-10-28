@@ -1,0 +1,48 @@
+Backend/calibration: data/2026-10-27_ibm_kingston_arith/calibration_prereg_dd.json
+N=21, a=2, t=3, physical line (17 qubits): [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]
+  true_DD                CZ= 585 (+0 conditional)  X= 211  added: +9 barrier, +514 delay, +200 x duration~32.6 us  ESP=0.0853  ideal S=+0.2500
+  mult_by_1_DD           CZ= 587 (+0 conditional)  X= 210  added: +9 barrier, +472 delay, +200 x duration~32.4 us  ESP=0.0865  ideal S=+0.0000
+  wrong_constant_DD      CZ= 585 (+0 conditional)  X= 208  added: +9 barrier, +513 delay, +198 x duration~32.6 us  ESP=0.0855  ideal S=+0.0000
+  classical_exponent_DD  CZ= 585 (+0 conditional)  X= 213  added: +9 barrier, +515 delay, +202 x duration~34.8 us  ESP=0.0742  ideal S=+0.0000
+  true_noDD              CZ= 585 (+0 conditional)  X=  11  added: none                     duration~30.8 us  ESP=0.1133  ideal S=+0.2500
+Plan: {'true_DD': 70000, 'mult_by_1_DD': 30000, 'wrong_constant_DD': 30000, 'classical_exponent_DD': 30000, 'true_noDD': 40000} -> 200000 shots, estimated QPU time 67.5 s (budget 80 s)
+
+Exactness (noiseless exact simulation of the dynamic circuits vs exact model):
+  true_DD                max|P - P_model| = 2.7e-09  max|P - P_without_DD| = 8.3e-17  S = +0.250000  P = [0.1875 0.125  0.0625 0.125  0.1875 0.125  0.0625 0.125 ]
+  mult_by_1_DD           max|P - P_model| = 3.0e-15  max|P - P_without_DD| = 1.1e-16  S = +0.000000  P = [0.25 0.   0.25 0.   0.25 0.   0.25 0.  ]
+  wrong_constant_DD      max|P - P_model| = 2.6e-09  max|P - P_without_DD| = 5.6e-17  S = +0.000000  P = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]
+  classical_exponent_DD  max|P - P_model| = 1.5e-15  max|P - P_without_DD| = 5.6e-17  S = -0.000000  P = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]
+  true_noDD              max|P - P_model| = 2.7e-09  max|P - P_without_DD| = 2.8e-17  S = +0.250000  P = [0.1875 0.125  0.0625 0.125  0.1875 0.125  0.0625 0.125 ]
+
+Coherent-error model (calibrated ZZ; qubit 44 offset [15.0, 20.0] kHz):
+  zz                 S: true_DD +0.2466 | mult_by_1_DD +0.0007 | wrong_constant_DD -0.0000 | classical_exponent_DD +0.0002 | true_noDD|asap +0.2264 | true_noDD|ibm_schedule +0.1862
+  det44_+15kHz       S: true_DD +0.2476 | mult_by_1_DD +0.0000 | wrong_constant_DD +0.0000 | classical_exponent_DD +0.0000 | true_noDD|asap -0.1503 | true_noDD|ibm_schedule -0.1822
+  det44_+15kHz+zz    S: true_DD +0.2407 | mult_by_1_DD +0.0006 | wrong_constant_DD -0.0000 | classical_exponent_DD +0.0001 | true_noDD|asap -0.1601 | true_noDD|ibm_schedule -0.2092
+  det44_+20kHz       S: true_DD +0.2458 | mult_by_1_DD +0.0000 | wrong_constant_DD +0.0000 | classical_exponent_DD +0.0000 | true_noDD|asap -0.2422 | true_noDD|ibm_schedule -0.2497
+  det44_+20kHz+zz    S: true_DD +0.2377 | mult_by_1_DD +0.0006 | wrong_constant_DD -0.0000 | classical_exponent_DD +0.0001 | true_noDD|asap -0.2233 | true_noDD|ibm_schedule -0.1805
+
+Standard noise model: 100 trajectories per witness, 300 per true circuit, scales [1.0]
+  s=1.0  [true_DD               ] S = +0.0345 +- 0.0050 (trajectories)  P(y) = [0.134  0.1247 0.1168 0.1238 0.1342 0.125  0.117  0.1244]  [263 s]
+  s=1.0  [mult_by_1_DD          ] S = -0.0025 +- 0.0028 (trajectories)  P(y) = [0.1487 0.101  0.1504 0.1008 0.1489 0.1002 0.1498 0.1003]  [94 s]
+  s=1.0  [wrong_constant_DD     ] S = +0.0000 +- 0.0015 (trajectories)  P(y) = [0.1265 0.1241 0.1259 0.1233 0.1257 0.1239 0.1263 0.1244]  [105 s]
+  s=1.0  [classical_exponent_DD ] S = +0.0000 +- 0.0000 (trajectories)  P(y) = [0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125]  [108 s]
+  s=1.0  [true_noDD             ] S = +0.0348 +- 0.0049 (trajectories)  P(y) = [0.1343 0.1246 0.1168 0.1238 0.1343 0.1249 0.117  0.1243]  [277 s]
+
+Combined predictions (expected significance with the plan):
+  s=1.0 | no coherent error | noDD timing asap                   S(true_DD)=+0.0328 S(true_noDD)=+0.0348  z primary min +6.7  z secondary -0.5
+  s=1.0 | zz | noDD timing asap                                  S(true_DD)=+0.0324 S(true_noDD)=+0.0315  z primary min +6.6  z secondary +0.2
+  s=1.0 | zz | noDD timing ibm_schedule                          S(true_DD)=+0.0324 S(true_noDD)=+0.0259  z primary min +6.6  z secondary +1.4
+  s=1.0 | det44_+15kHz | noDD timing asap                        S(true_DD)=+0.0325 S(true_noDD)=-0.0209  z primary min +6.6  z secondary +12.0
+  s=1.0 | det44_+15kHz | noDD timing ibm_schedule                S(true_DD)=+0.0325 S(true_noDD)=-0.0254  z primary min +6.6  z secondary +13.0
+  s=1.0 | det44_+15kHz+zz | noDD timing asap                     S(true_DD)=+0.0316 S(true_noDD)=-0.0223  z primary min +6.5  z secondary +12.2
+  s=1.0 | det44_+15kHz+zz | noDD timing ibm_schedule             S(true_DD)=+0.0316 S(true_noDD)=-0.0291  z primary min +6.5  z secondary +13.7
+  s=1.0 | det44_+20kHz | noDD timing asap                        S(true_DD)=+0.0323 S(true_noDD)=-0.0337  z primary min +6.6  z secondary +14.9
+  s=1.0 | det44_+20kHz | noDD timing ibm_schedule                S(true_DD)=+0.0323 S(true_noDD)=-0.0348  z primary min +6.6  z secondary +15.1
+  s=1.0 | det44_+20kHz+zz | noDD timing asap                     S(true_DD)=+0.0312 S(true_noDD)=-0.0311  z primary min +6.4  z secondary +14.0
+  s=1.0 | det44_+20kHz+zz | noDD timing ibm_schedule             S(true_DD)=+0.0312 S(true_noDD)=-0.0251  z primary min +6.4  z secondary +12.7
+
+Prediction from the first run itself:
+  empirical (first-run visibility 0.0567, phase refocused): S(true_DD)=+0.0135 S(true_noDD)=-0.0136  z primary min +2.8  z secondary +6.1
+Circuits saved: data\2026-10-27_ibm_kingston_arith\prereg_arith_dd_circuits.qpy (order ['true_DD', 'mult_by_1_DD', 'wrong_constant_DD', 'classical_exponent_DD', 'true_noDD'])
+
+Pre-registration written: data/2026-10-27_ibm_kingston_arith/prereg_arith_dd.json

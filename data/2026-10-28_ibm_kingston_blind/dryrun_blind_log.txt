@@ -1,0 +1,104 @@
+a= 2  L=2 t=3 c=16 c'= 5  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44, 43, 42]  TVD(P_ideal, U)=0.1250  testable  P_ideal=[0.1875 0.125  0.0625 0.125  0.1875 0.125  0.0625 0.125 ]
+     true                CZ= 585(+0) +X=200 dur= 32.7us ESP=0.1045 |P-model|=2.7e-09 |P-noDD|=5.6e-17
+     classical_exponent  CZ= 585(+0) +X=202 dur= 34.8us ESP=0.0942 |P-model|=1.5e-15 |P-noDD|=5.6e-17 v_ideal=-0.000 (discriminating)
+     decohered_control   CZ= 585(+0) +X=182 dur= 32.7us ESP=0.1047 |P-model|=1.9e-15 |P-noDD|=5.6e-17 v_ideal=-0.000 (discriminating)
+     mult_by_1           CZ= 587(+0) +X=200 dur= 32.4us ESP=0.1059 |P-model|=3.0e-15 |P-noDD|=5.6e-17 v_ideal=+0.000 (discriminating)
+     wrong_constant      CZ= 585(+0) +X=200 dur= 32.7us ESP=0.1045 |P-model|=4.3e-09 |P-noDD|=5.6e-17 v_ideal=-0.000 (discriminating)
+a= 4  L=1 t=2 c=16 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.1250  testable  P_ideal=[0.375 0.25  0.125 0.25 ]
+     true                CZ= 545(+0) +X=152 dur= 28.2us ESP=0.1593 |P-model|=4.7e-10 |P-noDD|=5.6e-17
+     classical_exponent  CZ= 545(+0) +X=154 dur= 30.5us ESP=0.1457 |P-model|=5.1e-15 |P-noDD|=5.6e-17 v_ideal=-0.000 (discriminating)
+     decohered_control   CZ= 545(+0) +X=138 dur= 28.2us ESP=0.1595 |P-model|=4.9e-15 |P-noDD|=1.1e-16 v_ideal=-0.000 (discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.0us ESP=0.1611 |P-model|=6.2e-15 |P-noDD|=1.2e-24 v_ideal=+0.000 (discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.2us ESP=0.1596 |P-model|=6.9e-09 |P-noDD|=1.1e-16 v_ideal=+0.000 (discriminating)
+a= 5  L=1 t=2 c= 4 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.0000  NOT TESTABLE  P_ideal=[0.25 0.25 0.25 0.25]
+     true                CZ= 545(+0) +X=152 dur= 28.3us ESP=0.1591 |P-model|=3.2e-11 |P-noDD|=5.6e-17
+     classical_exponent  CZ= 545(+0) +X=154 dur= 30.5us ESP=0.1468 |P-model|=3.7e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     decohered_control   CZ= 545(+0) +X=138 dur= 28.3us ESP=0.1593 |P-model|=3.2e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.1us ESP=0.1608 |P-model|=6.9e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.3us ESP=0.1595 |P-model|=2.7e-11 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+a= 8  L=1 t=2 c= 1 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.5000  testable  P_ideal=[0.5 0.  0.5 0. ]
+     true                CZ= 547(+0) +X=152 dur= 28.0us ESP=0.1612 |P-model|=5.4e-15 |P-noDD|=3.3e-16
+     classical_exponent  CZ= 547(+0) +X=154 dur= 30.2us ESP=0.1472 |P-model|=3.8e-15 |P-noDD|=5.6e-17 v_ideal=-0.000 (discriminating)
+     decohered_control   CZ= 547(+0) +X=138 dur= 28.0us ESP=0.1614 |P-model|=3.6e-15 |P-noDD|=5.6e-17 v_ideal=-0.000 (discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.0us ESP=0.1612 |P-model|=5.4e-15 |P-noDD|=1.1e-16 v_ideal=+1.000 (non-discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.2us ESP=0.1597 |P-model|=4.8e-15 |P-noDD|=5.6e-17 v_ideal=+0.000 (discriminating)
+a=10  L=1 t=2 c=16 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.0000  NOT TESTABLE  P_ideal=[0.25 0.25 0.25 0.25]
+     true                CZ= 545(+0) +X=152 dur= 28.2us ESP=0.1591 |P-model|=5.8e-15 |P-noDD|=1.1e-16
+     classical_exponent  CZ= 545(+0) +X=154 dur= 30.5us ESP=0.1458 |P-model|=4.9e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     decohered_control   CZ= 545(+0) +X=138 dur= 28.2us ESP=0.1593 |P-model|=4.8e-15 |P-noDD|=1.1e-16 v_ideal=+nan (non-discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.0us ESP=0.1609 |P-model|=5.4e-15 |P-noDD|=1.1e-16 v_ideal=+nan (non-discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.2us ESP=0.1594 |P-model|=6.9e-09 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+a=11  L=1 t=2 c=16 c'= 5  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.0000  NOT TESTABLE  P_ideal=[0.25 0.25 0.25 0.25]
+     true                CZ= 545(+0) +X=152 dur= 28.2us ESP=0.1595 |P-model|=1.4e-11 |P-noDD|=1.1e-16
+     classical_exponent  CZ= 545(+0) +X=154 dur= 30.4us ESP=0.1464 |P-model|=5.3e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     decohered_control   CZ= 545(+0) +X=138 dur= 28.2us ESP=0.1597 |P-model|=5.0e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.0us ESP=0.1611 |P-model|=3.5e-12 |P-noDD|=1.7e-16 v_ideal=+nan (non-discriminating)
+     wrong_constant      CZ= 545(+0) +X=152 dur= 28.2us ESP=0.1595 |P-model|=4.7e-12 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+a=13  L=1 t=2 c= 1 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.4375  testable  P_ideal=[0.4687 0.0313 0.4687 0.0313]
+     true                CZ= 547(+0) +X=152 dur= 28.1us ESP=0.1608 |P-model|=3.5e-12 |P-noDD|=1.1e-16
+     classical_exponent  CZ= 547(+0) +X=154 dur= 30.3us ESP=0.1484 |P-model|=3.4e-15 |P-noDD|=1.1e-16 v_ideal=-0.000 (discriminating)
+     decohered_control   CZ= 547(+0) +X=138 dur= 28.1us ESP=0.1610 |P-model|=3.2e-15 |P-noDD|=1.1e-16 v_ideal=-0.000 (discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.1us ESP=0.1608 |P-model|=3.5e-12 |P-noDD|=1.1e-16 v_ideal=+1.000 (non-discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.3us ESP=0.1596 |P-model|=7.0e-09 |P-noDD|=5.6e-17 v_ideal=-0.000 (discriminating)
+a=16  L=1 t=2 c= 4 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.0625  testable  P_ideal=[0.3125 0.25   0.1875 0.25  ]
+     true                CZ= 545(+0) +X=152 dur= 28.2us ESP=0.1593 |P-model|=2.1e-10 |P-noDD|=8.3e-17
+     classical_exponent  CZ= 545(+0) +X=154 dur= 30.5us ESP=0.1455 |P-model|=3.6e-15 |P-noDD|=1.1e-16 v_ideal=+0.000 (discriminating)
+     decohered_control   CZ= 545(+0) +X=138 dur= 28.2us ESP=0.1595 |P-model|=3.2e-15 |P-noDD|=5.6e-17 v_ideal=+0.000 (discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.0us ESP=0.1612 |P-model|=1.2e-12 |P-noDD|=5.6e-17 v_ideal=+0.000 (discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.2us ESP=0.1597 |P-model|=5.1e-15 |P-noDD|=5.6e-17 v_ideal=+0.000 (discriminating)
+a=17  L=1 t=2 c=16 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.0000  NOT TESTABLE  P_ideal=[0.25 0.25 0.25 0.25]
+     true                CZ= 545(+0) +X=152 dur= 28.3us ESP=0.1589 |P-model|=3.5e-09 |P-noDD|=5.6e-17
+     classical_exponent  CZ= 545(+0) +X=154 dur= 30.5us ESP=0.1466 |P-model|=5.1e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     decohered_control   CZ= 545(+0) +X=138 dur= 28.3us ESP=0.1591 |P-model|=4.9e-15 |P-noDD|=1.1e-16 v_ideal=+nan (non-discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.1us ESP=0.1605 |P-model|=3.8e-12 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.3us ESP=0.1592 |P-model|=2.7e-11 |P-noDD|=1.1e-16 v_ideal=+nan (non-discriminating)
+a=19  L=1 t=2 c= 4 c'= 2  line [59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]  TVD(P_ideal, U)=0.0000  NOT TESTABLE  P_ideal=[0.25 0.25 0.25 0.25]
+     true                CZ= 545(+0) +X=152 dur= 28.2us ESP=0.1595 |P-model|=8.3e-12 |P-noDD|=1.1e-16
+     classical_exponent  CZ= 545(+0) +X=154 dur= 30.4us ESP=0.1464 |P-model|=3.4e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     decohered_control   CZ= 545(+0) +X=138 dur= 28.2us ESP=0.1597 |P-model|=3.2e-15 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     mult_by_1           CZ= 547(+0) +X=152 dur= 28.0us ESP=0.1611 |P-model|=4.9e-12 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+     wrong_constant      CZ= 545(+0) +X=150 dur= 28.2us ESP=0.1598 |P-model|=2.5e-11 |P-noDD|=5.6e-17 v_ideal=+nan (non-discriminating)
+
+Shot plans (testable candidates):
+  a= 2: {'true': 67800, 'classical_exponent': 33900, 'decohered_control': 33900, 'mult_by_1': 33900, 'wrong_constant': 33900}  -> 203400 shots, ~68.6 s QPU
+  a= 4: {'true': 68800, 'classical_exponent': 34400, 'decohered_control': 34400, 'mult_by_1': 34400, 'wrong_constant': 34400}  -> 206400 shots, ~68.5 s QPU
+  a= 8: {'true': 62400, 'classical_exponent': 36000, 'decohered_control': 36000, 'mult_by_1': 36000, 'wrong_constant': 36000}  -> 206400 shots, ~68.5 s QPU
+  a=13: {'true': 62400, 'classical_exponent': 36000, 'decohered_control': 36000, 'mult_by_1': 36000, 'wrong_constant': 36000}  -> 206400 shots, ~68.5 s QPU
+  a=16: {'true': 68800, 'classical_exponent': 34400, 'decohered_control': 34400, 'mult_by_1': 34400, 'wrong_constant': 34400}  -> 206400 shots, ~68.5 s QPU
+ISA check (live target): {2: 'valid', 4: 'valid', 8: 'valid', 13: 'valid', 16: 'valid'}
+
+Noisy predictions read from data\2026-10-28_ibm_kingston_blind\work\noisy_cache.json
+  a= 2 standard_model                 V_true=+0.1247+-0.0108  z={'classical_exponent': 6.64, 'decohered_control': 6.29, 'mult_by_1': 6.3, 'wrong_constant': 6.55}  P(SIGNAL)=0.997
+  a= 2 standard_model_x_kappa_27oct   V_true=+0.0732+-0.0108  z={'classical_exponent': 3.89, 'decohered_control': 3.54, 'mult_by_1': 3.36, 'wrong_constant': 3.8}  P(SIGNAL)=0.391
+  a= 4 standard_model                 V_true=+0.1249+-0.0107  z={'classical_exponent': 6.7, 'decohered_control': 6.78, 'mult_by_1': 7.25, 'wrong_constant': 6.44}  P(SIGNAL)=0.999
+  a= 4 standard_model_x_kappa_27oct   V_true=+0.0733+-0.0108  z={'classical_exponent': 3.93, 'decohered_control': 4.01, 'mult_by_1': 4.32, 'wrong_constant': 3.67}  P(SIGNAL)=0.556
+  a= 8 standard_model                 V_true=+0.2086+-0.0039  z={'classical_exponent': 30.39, 'decohered_control': 31.08, 'mult_by_1': -4.86, 'wrong_constant': 31.58}  P(SIGNAL)=1.000
+  a= 8 standard_model_x_kappa_27oct   V_true=+0.1221+-0.0040  z={'classical_exponent': 17.13, 'decohered_control': 17.82, 'mult_by_1': -18.18, 'wrong_constant': 18.32}  P(SIGNAL)=1.000
+  a=13 standard_model                 V_true=+0.1796+-0.0045  z={'classical_exponent': 22.37, 'decohered_control': 23.28, 'mult_by_1': 0.09, 'wrong_constant': 24.22}  P(SIGNAL)=1.000
+  a=13 standard_model_x_kappa_27oct   V_true=+0.1052+-0.0046  z={'classical_exponent': 12.45, 'decohered_control': 13.35, 'mult_by_1': -9.85, 'wrong_constant': 14.29}  P(SIGNAL)=1.000
+  a=16 standard_model                 V_true=+0.1668+-0.0215  z={'classical_exponent': 4.47, 'decohered_control': 4.48, 'mult_by_1': 4.7, 'wrong_constant': 4.56}  P(SIGNAL)=0.804
+  a=16 standard_model_x_kappa_27oct   V_true=+0.0978+-0.0215  z={'classical_exponent': 2.62, 'decohered_control': 2.63, 'mult_by_1': 2.76, 'wrong_constant': 2.71}  P(SIGNAL)=0.072
+
+Pre-registration written: data\2026-10-28_ibm_kingston_blind\prereg_blind.json  (block H = 973529, tip 973527)
+843ce7df558a4025f68147849e2470e5015c333f9030e2ef5fdd44017106ff3b  calibration_prereg.json
+334f2dbd880f6d36884d6b2112eb16e9c8e0eedfef71e2b52f67305731d8d099  context_prereg.json
+b278b9919af9919e8ef38b11d7d59c97939c4ed2a06590c90c2000c89b43a961  prereg_blind.json
+523a1e5ac8cece2275169d9876ee3a303eb3bd045972d875fb046051472a8a27  prereg_blind_circuits_a13.qpy
+5fe168baf0e42b56b7b882a31515ce12ecdea55e390fb371fca7b004d336933a  prereg_blind_circuits_a16.qpy
+73f1b3a5bafebab8a38a22810378065b7fe75d4860ba0353dae833be7a3bac3b  prereg_blind_circuits_a2.qpy
+fbbe3e35ad44bc00cdc0e5a11ba16566b141aa9f36ac4da8a80c4e4afde47e31  prereg_blind_circuits_a4.qpy
+ea787e5525d6a6bfd683a8d164713dbc6a58f05a6b5617bfa5e3108cfc72596e  prereg_blind_circuits_a8.qpy
+06128542794397e0f0c54aa0edc6f63e012aa7ed9c973567a62a4a5a46dd990e  prereg_ramsey.json
+c27a56206a87f5e370aa67f7a222ede62aa5d6de0adf23d8c7fbe01213f8551b  prereg_ramsey_circuits.qpy
+  RFC 3161 prereg_blind.json: Oct 28 08:51:32 2026 GMT (verified)
+  RFC 3161 SHA256SUMS.txt: Oct 28 08:51:33 2026 GMT (verified)
+  RFC 3161 prereg_blind_circuits_a2.qpy: Oct 28 08:51:33 2026 GMT (verified)
+  RFC 3161 prereg_blind_circuits_a4.qpy: Oct 28 08:51:34 2026 GMT (verified)
+  RFC 3161 prereg_blind_circuits_a8.qpy: Oct 28 08:51:35 2026 GMT (verified)
+  RFC 3161 prereg_blind_circuits_a13.qpy: Oct 28 08:51:35 2026 GMT (verified)
+  RFC 3161 prereg_blind_circuits_a16.qpy: Oct 28 08:51:36 2026 GMT (verified)
+  RFC 3161 prereg_ramsey.json: Oct 28 08:51:36 2026 GMT (verified)
+  RFC 3161 prereg_ramsey_circuits.qpy: Oct 28 08:51:37 2026 GMT (verified)
+  OpenTimestamps: return code 0, proofs {'prereg_blind.json': True, 'SHA256SUMS.txt': True, 'prereg_blind_circuits_a2.qpy': True, 'prereg_blind_circuits_a4.qpy': True, 'prereg_blind_circuits_a8.qpy': True, 'prereg_blind_circuits_a13.qpy': True, 'prereg_blind_circuits_a16.qpy': True, 'prereg_ramsey.json': True, 'prereg_ramsey_circuits.qpy': True}
+Time-stamps written: data\2026-10-28_ibm_kingston_blind\timestamps_prereg.json
+Tip after time-stamping: {'mempool.space': 973527, 'blockstream.info': 973527} (H = 973529 must not exist yet)

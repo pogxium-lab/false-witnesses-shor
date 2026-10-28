@@ -1,0 +1,31 @@
+Pre-registration sha256 95323217f5625d445487b2a27aff48051dd9fe790b91e0d7766c491fe8a54ae6; circuits sha256 fc30d1b7624d198027888f9a006bd81393cf493a14e7853f1f3c4a4f163974bd (matches the pre-registration and SHA256SUMS.txt); time-stamp proofs present: {'prereg_shor21_t5_dd.json': True, 'prereg_shor21_t5_dd_circuits.qpy': True}
+  true_DD                  CZ=1538  duration~78.2 us  ESP (live calibration) = 0.0016  ideal C2 success 0.2008
+  classical_exponent_DD    CZ=1538  duration~80.5 us  ESP (live calibration) = 0.0014  ideal C2 success 0.0625
+  decohered_e2_DD          CZ=1538  duration~78.2 us  ESP (live calibration) = 0.0016  ideal C2 success 0.1087
+  decohered_e3_DD          CZ=1538  duration~78.3 us  ESP (live calibration) = 0.0016  ideal C2 success 0.1277
+  decohered_e4_DD          CZ=1538  duration~78.2 us  ESP (live calibration) = 0.0016  ideal C2 success 0.1477
+  scrambled_constants_DD   CZ=1540  duration~77.7 us  ESP (live calibration) = 0.0017  ideal C2 success 0.0945
+Line [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44, 43, 42]; plan {'true_DD': 50900, 'classical_exponent_DD': 23700, 'decohered_e2_DD': 23700, 'decohered_e3_DD': 23700, 'decohered_e4_DD': 23700, 'scrambled_constants_DD': 23700} -> 169400 shots, estimated QPU time 68.5 s
+ISA check (live target): all circuits valid
+  exactness true_DD                  C2 success 0.20083 (pre-registered ideal 0.20083)
+  exactness classical_exponent_DD    C2 success 0.06250 (pre-registered ideal 0.06250)
+  exactness decohered_e2_DD          C2 success 0.10874 (pre-registered ideal 0.10874)
+  exactness decohered_e3_DD          C2 success 0.12767 (pre-registered ideal 0.12767)
+  exactness decohered_e4_DD          C2 success 0.14775 (pre-registered ideal 0.14775)
+  exactness scrambled_constants_DD   C2 success 0.09446 (pre-registered ideal 0.09446)
+Job tags: ['prereg_sha256:95323217f5625d445487b2a27aff48051dd9fe790b91e0d7766c491fe8a54ae6']
+Job submitted: dbgi6s8te5oc738i7rr0 (read back: --ibm --job dbgi6s8te5oc738i7rr0 --outdir data\2026-10-27_ibm_kingston_replication)
+
+=== Analysis (criterion C2 'exact order', N=21, a=2, t=5, dynamical decoupling) ===
+  uniform random : 0.0625
+  true_DD                 : 0.0644 +- 0.0011  (50900 shots)
+  classical_exponent_DD   : 0.0625 +- 0.0016  (23700 shots)   true - classical_exponent_DD = +0.0019 (+1.0 sigma)
+  decohered_e2_DD         : 0.0622 +- 0.0016  (23700 shots)   true - decohered_e2_DD = +0.0023 (+1.2 sigma)
+  decohered_e3_DD         : 0.0634 +- 0.0016  (23700 shots)   true - decohered_e3_DD = +0.0010 (+0.5 sigma)
+  decohered_e4_DD         : 0.0642 +- 0.0016  (23700 shots)   true - decohered_e4_DD = +0.0002 (+0.1 sigma)
+  scrambled_constants_DD  : 0.0624 +- 0.0016  (23700 shots)   true - scrambled_constants_DD = +0.0020 (+1.0 sigma)
+  true - random = +0.0019 (+1.8 sigma)
+  (criterion C1, for information only: true_DD 0.0644, classical_exponent_DD 0.0625, decohered_e2_DD 0.0622, decohered_e3_DD 0.0634, decohered_e4_DD 0.0642, scrambled_constants_DD 0.0624)
+  VERDICT: NO SIGNIFICANT SIGNAL (worst difference at +0.1 sigma)
+circuits archived: 6
+archived: data\2026-10-27_ibm_kingston_replication\job_dbgi6s8te5oc738i7rr0.json | execution: {'created': '2026-10-27T22:19:29.539884Z', 'finished': '2026-10-27T22:21:05.553754Z', 'running': '2026-10-27T22:19:30.97255Z'} | QPU: {'qpu_charge_time_seconds': 61, 'value': 1.010532, 'unit': 'resource_units', 'status': 'complete', 'details': [{'value': 1.010532, 'unit': 'resource_units', 'metric': {'id': 'caffe3ca-729c-5750-8777-df63bbf8bfd9', 'value': 61}}]}

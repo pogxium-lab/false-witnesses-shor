@@ -1,0 +1,20 @@
+# English rendering of the console output recorded during the run; numerical content unchanged.
+Device: ibm_kingston (hardware run)
+  (decohered_e1 dropped: not discriminating, same ideal success as the true circuit)
+N=15, a=7, t=3, physical line: (99, 95, 94, 93, 79, 73, 72, 71, 70, 69, 68, 67, 57, 47)
+  true                 CZ= 724  duration~40 us  ESP(calib.)=0.084  ideal success=0.5000 (random 0.2500)
+  classical_exponent   CZ= 724  duration~42 us  ESP(calib.)=0.071  ideal success=0.2500 (random 0.2500)
+  decohered_e2         CZ= 724  duration~40 us  ESP(calib.)=0.083  ideal success=0.2500 (random 0.2500)
+  scrambled_constants  CZ= 734  duration~40 us  ESP(calib.)=0.079  ideal success=0.1250 (random 0.2500)
+Plan: {'true': 60000, 'classical_exponent': 46666, 'decohered_e2': 46666, 'scrambled_constants': 46666}  -> estimated QPU time 67 s
+Job submitted: dbg9qfgiudkc73e424jg (read back: --ibm --job dbg9qfgiudkc73e424jg)
+
+=== Analysis (criterion C2 'exact order', N=15, t=3) ===
+  uniform random: 0.2500
+  true                : 0.2894 ± 0.0019  (60000 shots)
+  classical_exponent  : 0.2506 ± 0.0020  (46666 shots)   true − classical_exponent = +0.0389  (+14.2 σ)
+  decohered_e2        : 0.2443 ± 0.0020  (46666 shots)   true − decohered_e2 = +0.0452  (+16.6 σ)
+  scrambled_constants : 0.2436 ± 0.0020  (46666 shots)   true − scrambled_constants = +0.0458  (+16.9 σ)
+  true − random = +0.0394 (+21.3 σ)
+  (for information, strict criterion C1: true 0.6982, classical_exponent 0.7469, decohered_e2 0.7408, scrambled_constants 0.7409; NOT used for the verdict)
+  VERDICT: SIGNAL: the true circuit beats every control and the random baseline at ≥ 3σ

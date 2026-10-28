@@ -1,0 +1,688 @@
+{
+ "experiment": "Rerun of the N=21, a=2, t=3 modular-arithmetic test with dynamical decoupling (one job)",
+ "timestamp": "2026-10-27T20:43:13+01:00",
+ "status": "pre-registered before any submission",
+ "hypothesis": "The negative S of the true circuit in the first run comes from a coherent phase of ~180 deg on the e1+e2 coherence of the exponent register, accumulated in idle windows without dynamical decoupling, most simply a static frequency offset of 10-20 kHz of physical qubit 44 (holds e1, idles ~19-22 us until the feed-forward of the e2 measurement). An X-X echo in the idle windows refocuses a static offset and must restore S > 0.",
+ "previous_run": {
+  "job": "dbgehntrd2mc73cuiqsg",
+  "S_true": {
+   "S": -0.013582417582417544,
+   "se": 0.002355527562829068,
+   "n": 91000
+  },
+  "phase_fit_true": {
+   "x": -0.05378,
+   "x_se": 0.00933,
+   "two_lnLR": 36.90094,
+   "identifiable": "v and phase",
+   "v": 0.05672,
+   "v_se": 0.00934,
+   "phase_deg": -161.4664,
+   "phase_se_deg": 9.50908
+  }
+ },
+ "reference_preregistration": "experiences/2026-10-27_kingston_arith/prereg_arith.json",
+ "reference_circuits": "experiences\\2026-10-27_kingston_arith\\prereg_arith_circuits.qpy",
+ "reference_circuits_sha256": "32d24d5a9743411e109bfb378fdc4805c0e95d9b68fb9df92b0f7ed07a71f84f",
+ "calibration_snapshot": "experiences/2026-10-27_kingston_arith/calibration_prereg_dd.json",
+ "statistic": "S = P(y in {0,4}) - P(y in {2,6}) (exponent register y, 3 bits)",
+ "standard_error": "Var(S_hat) = [pA + pB - (pA - pB)^2] / n per circuit (multinomial); difference of two independent circuits: sqrt(Var1 + Var2)",
+ "verdict_rule_primary": "SIGNAL iff S(true_DD) > 0 AND S(true_DD) - S(w) >= 3 standard errors for EACH w in {mult_by_1_DD, wrong_constant_DD, classical_exponent_DD}; otherwise NO SIGNAL",
+ "verdict_rule_secondary": "phase hypothesis SUPPORTED iff S(true_DD) - S(true_noDD) >= 3 standard errors",
+ "reported": [
+  "S(true_noDD) against the first run (reproducibility)",
+  "fitted visibility and phase of the e1+e2 coherence (true_DD, true_noDD) and of the e2 coherence (mult_by_1_DD): v P(phase) + (1 - v) U, maximum likelihood",
+  "S / P(y0=0) and P(y0=0) of every circuit"
+ ],
+ "dynamical_decoupling": {
+  "sequence": "X-X",
+  "min_window_us": 1.0,
+  "scheduler": "qiskit_ibm_runtime.transpiler.passes.scheduling: ALAPScheduleAnalysis + PadDynamicalDecoupling (gate lengths converted to dt), staggered spacings on neighbouring qubits (coupling-map colouring): [1/4, 1/2, 1/4] or [1/2, 1/2, 0]",
+  "durations": "calibration snapshot",
+  "sampler_dynamical_decoupling": "disabled (echoes are explicit gates)"
+ },
+ "circuits_order": [
+  "true_DD",
+  "mult_by_1_DD",
+  "wrong_constant_DD",
+  "classical_exponent_DD",
+  "true_noDD"
+ ],
+ "backend": "ibm_kingston",
+ "physical_line": [
+  54,
+  55,
+  59,
+  75,
+  74,
+  73,
+  72,
+  71,
+  70,
+  69,
+  68,
+  67,
+  57,
+  47,
+  46,
+  45,
+  44
+ ],
+ "shots": {
+  "true_DD": 70000,
+  "mult_by_1_DD": 30000,
+  "wrong_constant_DD": 30000,
+  "classical_exponent_DD": 30000,
+  "true_noDD": 40000
+ },
+ "qpu_estimate_s": 67.5,
+ "budget_s": 80.0,
+ "circuits_file": "experiences\\2026-10-27_kingston_arith\\prereg_arith_dd_circuits.qpy",
+ "circuits_sha256": "3fc675a4b4336480efec704c13c06b0f162935b13dd66e1a5d8aff0c2222160c",
+ "circuits": {
+  "true_DD": {
+   "logical": "true",
+   "dd": true,
+   "cz": 585,
+   "cz_conditional": 0,
+   "x_gates": 211,
+   "added_operations": {
+    "barrier": 9,
+    "x": 200,
+    "delay": 514
+   },
+   "duration_us": 32.61,
+   "esp": 0.08534,
+   "ideal_P": [
+    0.1875,
+    0.125,
+    0.0625,
+    0.125,
+    0.1875,
+    0.125,
+    0.0625,
+    0.125
+   ],
+   "ideal_S": 0.25
+  },
+  "mult_by_1_DD": {
+   "logical": "mult_by_1",
+   "dd": true,
+   "cz": 587,
+   "cz_conditional": 0,
+   "x_gates": 210,
+   "added_operations": {
+    "barrier": 9,
+    "x": 200,
+    "delay": 472
+   },
+   "duration_us": 32.39,
+   "esp": 0.08647,
+   "ideal_P": [
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0
+   ],
+   "ideal_S": 0.0
+  },
+  "wrong_constant_DD": {
+   "logical": "wrong_constant",
+   "dd": true,
+   "cz": 585,
+   "cz_conditional": 0,
+   "x_gates": 208,
+   "added_operations": {
+    "barrier": 9,
+    "x": 198,
+    "delay": 513
+   },
+   "duration_us": 32.58,
+   "esp": 0.0855,
+   "ideal_P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ],
+   "ideal_S": 0.0
+  },
+  "classical_exponent_DD": {
+   "logical": "classical_exponent",
+   "dd": true,
+   "cz": 585,
+   "cz_conditional": 0,
+   "x_gates": 213,
+   "added_operations": {
+    "barrier": 9,
+    "x": 202,
+    "delay": 515
+   },
+   "duration_us": 34.76,
+   "esp": 0.07416,
+   "ideal_P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ],
+   "ideal_S": 0.0
+  },
+  "true_noDD": {
+   "logical": "true",
+   "dd": false,
+   "cz": 585,
+   "cz_conditional": 0,
+   "x_gates": 11,
+   "added_operations": {},
+   "duration_us": 30.83,
+   "esp": 0.11331,
+   "ideal_P": [
+    0.1875,
+    0.125,
+    0.0625,
+    0.125,
+    0.1875,
+    0.125,
+    0.0625,
+    0.125
+   ],
+   "ideal_S": 0.25
+  }
+ },
+ "true_noDD_identical_to_first_run_true": true,
+ "exactness_noiseless_dynamic_simulation": {
+  "true_DD": {
+   "max_abs_dev_model": 2.6954580789606553e-09,
+   "max_abs_dev_without_dd": 8.326672684688674e-17,
+   "S": 0.24999999999999867,
+   "P": [
+    0.1875,
+    0.125,
+    0.0625,
+    0.125,
+    0.1875,
+    0.125,
+    0.0625,
+    0.125
+   ]
+  },
+  "mult_by_1_DD": {
+   "max_abs_dev_model": 2.9765828928163965e-15,
+   "max_abs_dev_without_dd": 1.1102230246251565e-16,
+   "S": 6.661338147750939e-16,
+   "P": [
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0
+   ]
+  },
+  "wrong_constant_DD": {
+   "max_abs_dev_model": 2.6020865184772646e-09,
+   "max_abs_dev_without_dd": 5.551115123125783e-17,
+   "S": 4.440892098500626e-16,
+   "P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ]
+  },
+  "classical_exponent_DD": {
+   "max_abs_dev_model": 1.4988010832439613e-15,
+   "max_abs_dev_without_dd": 5.551115123125783e-17,
+   "S": -5.551115123125783e-17,
+   "P": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+   ]
+  },
+  "true_noDD": {
+   "max_abs_dev_model": 2.6954580789606553e-09,
+   "max_abs_dev_without_dd": 2.7755575615628914e-17,
+   "S": 0.24999999999999872,
+   "P": [
+    0.1875,
+    0.125,
+    0.0625,
+    0.125,
+    0.1875,
+    0.125,
+    0.0625,
+    0.125
+   ]
+  }
+ },
+ "coherent_error_model": {
+  "description": "exact simulation of the dynamic circuits with static errors on an ASAP timeline (calibrated durations, explicit delays, feed-forward latency 0.7 us): calibrated ZZ of the line and/or a frequency offset of qubit 44; noDD with two timing models (ASAP; IBM dynamic-circuit scheduler)",
+  "S": {
+   "zz": {
+    "true_DD": {
+     "S": 0.24658,
+     "P_y0_0": 0.50027
+    },
+    "mult_by_1_DD": {
+     "S": 0.00069,
+     "P_y0_0": 0.99459
+    },
+    "wrong_constant_DD": {
+     "S": -3e-05,
+     "P_y0_0": 0.49993
+    },
+    "classical_exponent_DD": {
+     "S": 0.00018,
+     "P_y0_0": 0.49999
+    },
+    "true_noDD|asap": {
+     "S": 0.22639,
+     "P_y0_0": 0.50076
+    },
+    "true_noDD|ibm_schedule": {
+     "S": 0.1862,
+     "P_y0_0": 0.50031
+    }
+   },
+   "det44_+15kHz": {
+    "true_DD": {
+     "S": 0.24762,
+     "P_y0_0": 0.5
+    },
+    "mult_by_1_DD": {
+     "S": 1e-05,
+     "P_y0_0": 0.99999
+    },
+    "wrong_constant_DD": {
+     "S": 0.0,
+     "P_y0_0": 0.5
+    },
+    "classical_exponent_DD": {
+     "S": 0.0,
+     "P_y0_0": 0.5
+    },
+    "true_noDD|asap": {
+     "S": -0.15033,
+     "P_y0_0": 0.50001
+    },
+    "true_noDD|ibm_schedule": {
+     "S": -0.18218,
+     "P_y0_0": 0.5
+    }
+   },
+   "det44_+15kHz+zz": {
+    "true_DD": {
+     "S": 0.24065,
+     "P_y0_0": 0.50026
+    },
+    "mult_by_1_DD": {
+     "S": 0.00063,
+     "P_y0_0": 0.99458
+    },
+    "wrong_constant_DD": {
+     "S": -3e-05,
+     "P_y0_0": 0.49993
+    },
+    "classical_exponent_DD": {
+     "S": 0.00013,
+     "P_y0_0": 0.49999
+    },
+    "true_noDD|asap": {
+     "S": -0.16015,
+     "P_y0_0": 0.50057
+    },
+    "true_noDD|ibm_schedule": {
+     "S": -0.20923,
+     "P_y0_0": 0.50031
+    }
+   },
+   "det44_+20kHz": {
+    "true_DD": {
+     "S": 0.24578,
+     "P_y0_0": 0.5
+    },
+    "mult_by_1_DD": {
+     "S": 2e-05,
+     "P_y0_0": 0.99998
+    },
+    "wrong_constant_DD": {
+     "S": 1e-05,
+     "P_y0_0": 0.5
+    },
+    "classical_exponent_DD": {
+     "S": 1e-05,
+     "P_y0_0": 0.5
+    },
+    "true_noDD|asap": {
+     "S": -0.24223,
+     "P_y0_0": 0.50002
+    },
+    "true_noDD|ibm_schedule": {
+     "S": -0.24975,
+     "P_y0_0": 0.5
+    }
+   },
+   "det44_+20kHz+zz": {
+    "true_DD": {
+     "S": 0.23765,
+     "P_y0_0": 0.50026
+    },
+    "mult_by_1_DD": {
+     "S": 0.00062,
+     "P_y0_0": 0.99457
+    },
+    "wrong_constant_DD": {
+     "S": -2e-05,
+     "P_y0_0": 0.49993
+    },
+    "classical_exponent_DD": {
+     "S": 0.00012,
+     "P_y0_0": 0.49999
+    },
+    "true_noDD|asap": {
+     "S": -0.22334,
+     "P_y0_0": 0.5005
+    },
+    "true_noDD|ibm_schedule": {
+     "S": -0.18046,
+     "P_y0_0": 0.50031
+    }
+   }
+  }
+ },
+ "noisy_predictions_standard_model": {
+  "1.0": {
+   "S": {
+    "true_DD": 0.03445,
+    "mult_by_1_DD": -0.00253,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": 0.03482
+   },
+   "S_trajectory_se": {
+    "true_DD": 0.00498,
+    "mult_by_1_DD": 0.00279,
+    "wrong_constant_DD": 0.00148,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": 0.00492
+   },
+   "P": {
+    "true_DD": [
+     0.13403,
+     0.1247,
+     0.11677,
+     0.12384,
+     0.13424,
+     0.12501,
+     0.11705,
+     0.12437
+    ],
+    "mult_by_1_DD": [
+     0.14874,
+     0.10104,
+     0.15036,
+     0.10078,
+     0.14887,
+     0.10016,
+     0.14979,
+     0.10026
+    ],
+    "wrong_constant_DD": [
+     0.12646,
+     0.12405,
+     0.12588,
+     0.12327,
+     0.12573,
+     0.12394,
+     0.12628,
+     0.1244
+    ],
+    "classical_exponent_DD": [
+     0.12501,
+     0.12499,
+     0.12501,
+     0.12499,
+     0.12501,
+     0.12499,
+     0.12501,
+     0.12499
+    ],
+    "true_noDD": [
+     0.13429,
+     0.12462,
+     0.11675,
+     0.12378,
+     0.13432,
+     0.12491,
+     0.11704,
+     0.12429
+    ]
+   }
+  }
+ },
+ "combined_predictions": {
+  "s=1.0 | no coherent error | noDD timing asap": {
+   "S": {
+    "true_DD": 0.03281,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": 0.03482
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.77,
+    "wrong_constant_DD": 6.7,
+    "classical_exponent_DD": 6.72
+   },
+   "z_primary_min": 6.7,
+   "z_secondary": -0.45
+  },
+  "s=1.0 | zz | noDD timing asap": {
+   "S": {
+    "true_DD": 0.03237,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": 0.03153
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.69,
+    "wrong_constant_DD": 6.6,
+    "classical_exponent_DD": 6.63
+   },
+   "z_primary_min": 6.6,
+   "z_secondary": 0.19
+  },
+  "s=1.0 | zz | noDD timing ibm_schedule": {
+   "S": {
+    "true_DD": 0.03237,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": 0.02593
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.69,
+    "wrong_constant_DD": 6.6,
+    "classical_exponent_DD": 6.63
+   },
+   "z_primary_min": 6.6,
+   "z_secondary": 1.45
+  },
+  "s=1.0 | det44_+15kHz | noDD timing asap": {
+   "S": {
+    "true_DD": 0.0325,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.02094
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.71,
+    "wrong_constant_DD": 6.63,
+    "classical_exponent_DD": 6.66
+   },
+   "z_primary_min": 6.63,
+   "z_secondary": 12.04
+  },
+  "s=1.0 | det44_+15kHz | noDD timing ibm_schedule": {
+   "S": {
+    "true_DD": 0.0325,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.02537
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.71,
+    "wrong_constant_DD": 6.63,
+    "classical_exponent_DD": 6.66
+   },
+   "z_primary_min": 6.63,
+   "z_secondary": 13.04
+  },
+  "s=1.0 | det44_+15kHz+zz | noDD timing asap": {
+   "S": {
+    "true_DD": 0.03159,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.02231
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.54,
+    "wrong_constant_DD": 6.45,
+    "classical_exponent_DD": 6.47
+   },
+   "z_primary_min": 6.45,
+   "z_secondary": 12.15
+  },
+  "s=1.0 | det44_+15kHz+zz | noDD timing ibm_schedule": {
+   "S": {
+    "true_DD": 0.03159,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.02914
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.54,
+    "wrong_constant_DD": 6.45,
+    "classical_exponent_DD": 6.47
+   },
+   "z_primary_min": 6.45,
+   "z_secondary": 13.69
+  },
+  "s=1.0 | det44_+20kHz | noDD timing asap": {
+   "S": {
+    "true_DD": 0.03226,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.03374
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.67,
+    "wrong_constant_DD": 6.58,
+    "classical_exponent_DD": 6.61
+   },
+   "z_primary_min": 6.58,
+   "z_secondary": 14.87
+  },
+  "s=1.0 | det44_+20kHz | noDD timing ibm_schedule": {
+   "S": {
+    "true_DD": 0.03226,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.03478
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.67,
+    "wrong_constant_DD": 6.58,
+    "classical_exponent_DD": 6.61
+   },
+   "z_primary_min": 6.58,
+   "z_secondary": 15.11
+  },
+  "s=1.0 | det44_+20kHz+zz | noDD timing asap": {
+   "S": {
+    "true_DD": 0.03119,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.03111
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.46,
+    "wrong_constant_DD": 6.37,
+    "classical_exponent_DD": 6.39
+   },
+   "z_primary_min": 6.37,
+   "z_secondary": 14.04
+  },
+  "s=1.0 | det44_+20kHz+zz | noDD timing ibm_schedule": {
+   "S": {
+    "true_DD": 0.03119,
+    "mult_by_1_DD": -0.00243,
+    "wrong_constant_DD": 3e-05,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.02513
+   },
+   "z_primary": {
+    "mult_by_1_DD": 6.46,
+    "wrong_constant_DD": 6.37,
+    "classical_exponent_DD": 6.39
+   },
+   "z_primary_min": 6.37,
+   "z_secondary": 12.7
+  },
+  "empirical | first-run visibility, phase refocused": {
+   "S": {
+    "true_DD": 0.01351,
+    "mult_by_1_DD": 0.0,
+    "wrong_constant_DD": 0.0,
+    "classical_exponent_DD": 0.0,
+    "true_noDD": -0.01358
+   },
+   "z_primary": {
+    "mult_by_1_DD": 2.77,
+    "wrong_constant_DD": 2.77,
+    "classical_exponent_DD": 2.77
+   },
+   "z_primary_min": 2.77,
+   "z_secondary": 6.11,
+   "visibility_first_run": 0.05672
+  }
+ },
+ "trajectories": {
+  "true": 300,
+  "witness": 100
+ },
+ "noise_model": "noise_model.py: calibrated depolarising CZ/1q errors, symmetric readout errors, T1/T2 relaxation in idle periods (DD: half of the pure dephasing removed), feed-forward latency; no coherent errors. Combined prediction: S(true_*) of the standard model times S_coherent / 0.25 of each coherent scenario; DD circuits also times the error factor of the added X gates."
+}

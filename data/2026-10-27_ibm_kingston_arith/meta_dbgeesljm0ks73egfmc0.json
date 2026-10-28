@@ -1,0 +1,58 @@
+{
+ "experiment": "sine_window_hadamard_test",
+ "pubs": [
+  [
+   "uniform",
+   "sine"
+  ],
+  [
+   "middle_pair",
+   "edge_pair",
+   "sine_no_translation"
+  ]
+ ],
+ "plan": {
+  "uniform": 66000,
+  "sine": 66000,
+  "middle_pair": 16000,
+  "edge_pair": 16000,
+  "sine_no_translation": 16000
+ },
+ "backend": "ibm_kingston",
+ "physical_qubits": [
+  144,
+  124,
+  125,
+  123,
+  136,
+  143,
+  122,
+  117,
+  105,
+  106,
+  107,
+  97
+ ],
+ "roles": {
+  "c": 144,
+  "J": [
+   124,
+   125,
+   123
+  ],
+  "R": [
+   136,
+   143,
+   122,
+   117,
+   105,
+   106,
+   107,
+   97
+  ]
+ },
+ "cz": 133,
+ "prereg": "data/2026-10-27_ibm_kingston_arith/prereg_sine_window.json",
+ "date": "2026-10-27T19:03:30",
+ "qpu_estimate_s": 57.710800000000006
+}

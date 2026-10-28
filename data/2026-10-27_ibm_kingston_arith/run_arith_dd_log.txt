@@ -1,0 +1,37 @@
+ESP below: today's live calibration, pre-registered circuits
+Backend/calibration: ibm_kingston
+N=21, a=2, t=3, physical line (17 qubits): [54, 55, 59, 75, 74, 73, 72, 71, 70, 69, 68, 67, 57, 47, 46, 45, 44]
+  true_DD                CZ= 585 (+0 conditional)  X= 211  added: +9 barrier, +514 delay, +200 x duration~32.6 us  ESP=0.0853  ideal S=+0.2500
+  mult_by_1_DD           CZ= 587 (+0 conditional)  X= 210  added: +9 barrier, +472 delay, +200 x duration~32.4 us  ESP=0.0865  ideal S=+0.0000
+  wrong_constant_DD      CZ= 585 (+0 conditional)  X= 208  added: +9 barrier, +513 delay, +198 x duration~32.6 us  ESP=0.0855  ideal S=+0.0000
+  classical_exponent_DD  CZ= 585 (+0 conditional)  X= 213  added: +9 barrier, +515 delay, +202 x duration~34.8 us  ESP=0.0742  ideal S=+0.0000
+  true_noDD              CZ= 585 (+0 conditional)  X=  11  added: none                     duration~30.8 us  ESP=0.1133  ideal S=+0.2500
+Plan: {'true_DD': 70000, 'mult_by_1_DD': 30000, 'wrong_constant_DD': 30000, 'classical_exponent_DD': 30000, 'true_noDD': 40000} -> 200000 shots, estimated QPU time 67.5 s (budget 80 s)
+Exactness of the stored circuits (noiseless exact simulation):
+  true_DD                max|P - P_ideal| = 2.7e-09
+  mult_by_1_DD           max|P - P_ideal| = 3.0e-15
+  wrong_constant_DD      max|P - P_ideal| = 2.6e-09
+  classical_exponent_DD  max|P - P_ideal| = 1.5e-15
+  true_noDD              max|P - P_ideal| = 2.7e-09
+ISA check (live target): all circuits valid
+Job submitted: dbgfu89j4t8s73ac9l00 (read back: --ibm --job dbgfu89j4t8s73ac9l00 --outdir data\2026-10-27_ibm_kingston_arith)
+
+=== Analysis: S = P(y in {0, 4}) - P(y in {2, 6}), N=21, a=2, t=3, with / without dynamical decoupling ===
+  true_DD               : S = +0.0189 +- 0.0027  (ideal +0.2500, 70000 shots; S/P(y0=0) = +0.0375; P(y0=0) = 0.5054)
+  mult_by_1_DD          : S = +0.0025 +- 0.0044  (ideal +0.0000, 30000 shots; S/P(y0=0) = +0.0044; P(y0=0) = 0.5714)
+  wrong_constant_DD     : S = +0.0007 +- 0.0041  (ideal +0.0000, 30000 shots; S/P(y0=0) = +0.0014; P(y0=0) = 0.5004)
+  classical_exponent_DD : S = -0.0007 +- 0.0041  (ideal +0.0000, 30000 shots; S/P(y0=0) = -0.0014; P(y0=0) = 0.4982)
+  true_noDD             : S = -0.0015 +- 0.0035  (ideal +0.2500, 40000 shots; S/P(y0=0) = -0.0030; P(y0=0) = 0.5010)
+    true_DD - mult_by_1_DD           = +0.0164 (+3.2 sigma)
+    true_DD - wrong_constant_DD      = +0.0182 (+3.7 sigma)
+    true_DD - classical_exponent_DD  = +0.0196 (+4.0 sigma)
+    true_DD - true_noDD      = +0.0205 (+4.6 sigma)
+    true_noDD - first run    = +0.0121 (+2.8 sigma; first run -0.0136 +- 0.0024)
+  Fitted coherence (v P_phase + (1 - v) U): phase on e1 + e2 for the true circuits, on e2 for mult_by_1_DD
+    true_DD                v = 0.0762 +- 0.0106  phase = -10.6 +- 8.1 deg  (v cos phase = +0.0749 +- 0.0106)  2lnLR = 51.3
+    true_noDD              v = 0.0241 +- 0.0142  phase = -104.6 +- 33.6 deg  (v cos phase = -0.0061 +- 0.0141)  2lnLR = 2.9
+    mult_by_1_DD           v cos(phase) = +0.1428 +- 0.0057 (phase not identifiable)  2lnLR = 613.9
+  PRIMARY VERDICT: SIGNAL: S(true_DD) > 0 and exceeds every DD witness by >= 3 sigma
+  SECONDARY (phase hypothesis): SUPPORTED: S(true_DD) - S(true_noDD) = +4.6 sigma >= 3
+circuits archived: 5
+archived: data\2026-10-27_ibm_kingston_arith\job_dbgfu89j4t8s73ac9l00.json | execution: {'created': '2026-10-27T19:44:34.011512Z', 'finished': '2026-10-27T19:59:55.569294Z', 'running': '2026-10-27T19:56:53.457402Z'} | QPU: {'qpu_charge_time_seconds': 61, 'value': 1.005641, 'unit': 'resource_units', 'status': 'complete', 'details': [{'value': 1.005641, 'unit': 'resource_units', 'metric': {'id': 'caffe3ca-729c-5750-8777-df63bbf8bfd9', 'value': 61}}]}

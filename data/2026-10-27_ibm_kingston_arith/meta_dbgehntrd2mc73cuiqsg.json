@@ -1,0 +1,50 @@
+{
+ "experiment": "arith_N21_a2_t3",
+ "N": 21,
+ "a": 2,
+ "t": 3,
+ "order": [
+  "true",
+  "mult_by_1",
+  "wrong_constant",
+  "decohered_e2",
+  "classical_exponent"
+ ],
+ "plan": {
+  "true": 91000,
+  "mult_by_1": 45000,
+  "wrong_constant": 45000,
+  "decohered_e2": 45000,
+  "classical_exponent": 45000
+ },
+ "backend": "ibm_kingston",
+ "physical_line": [
+  54,
+  55,
+  59,
+  75,
+  74,
+  73,
+  72,
+  71,
+  70,
+  69,
+  68,
+  67,
+  57,
+  47,
+  46,
+  45,
+  44
+ ],
+ "cz": {
+  "true": 585,
+  "mult_by_1": 587,
+  "wrong_constant": 585,
+  "decohered_e2": 585,
+  "classical_exponent": 585
+ },
+ "prereg": "data/2026-10-27_ibm_kingston_arith/prereg_arith.json",
+ "date": "2026-10-27T19:09:35",
+ "qpu_estimate_s": 87.54579199999999
+}

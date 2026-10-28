@@ -1,0 +1,46 @@
+{
+ "a": 16,
+ "t": 2,
+ "fits": {
+  "true": {
+   "V": 0.13841111465614758,
+   "se": 0.02152955728025023,
+   "n": 68800
+  },
+  "classical_exponent": {
+   "V": 0.01925865769476188,
+   "se": 0.030464841485624554,
+   "n": 34400
+  },
+  "decohered_control": {
+   "V": 0.040737938660303785,
+   "se": 0.03051321518646887,
+   "n": 34400
+  },
+  "mult_by_1": {
+   "V": 0.06248034385155677,
+   "se": 0.028956134251648044,
+   "n": 34400
+  },
+  "wrong_constant": {
+   "V": -0.003464803372408616,
+   "se": 0.03039649441521453,
+   "n": 34400
+  }
+ },
+ "z": {
+  "classical_exponent": 3.1940474230535116,
+  "decohered_control": 2.6154949353158803,
+  "mult_by_1": 2.1043391137736562,
+  "wrong_constant": 3.8088782076732506
+ },
+ "z_true_vs_0": 6.428888102734776,
+ "discriminating": [
+  "classical_exponent",
+  "decohered_control",
+  "mult_by_1",
+  "wrong_constant"
+ ],
+ "verdict": "NO SIGNAL (V_true = +0.1384; smallest discriminating difference +2.1 sigma)",
+ "signal": false
+}

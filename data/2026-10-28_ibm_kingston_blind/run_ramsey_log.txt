@@ -1,0 +1,20 @@
+Fingerprint checks: {'circuits match prereg': True, 'prereg in SHA256SUMS': True, 'circuits in SHA256SUMS': True, 'time-stamp proofs present': True}
+ISA check (live target): all circuits valid
+  ramsey_44_54     25 delays 0.00..30.02 us x 2 theta, probe (44, 54), excite ()
+  ramsey_44_45one  25 delays 0.00..30.02 us x 2 theta, probe (44, 54), excite (45,)
+  ramsey_45        25 delays 0.00..30.02 us x 2 theta, probe (45,), excite ()
+  echo_44_54       13 delays 0.00..120.06 us x 2 theta, probe (44, 54), excite ()
+  echo_45          13 delays 0.00..120.06 us x 2 theta, probe (45,), excite ()
+  101 circuits, 202 parameter values x 64 shots = 12928 shots; estimated QPU 6.7 s (cap 10 s)
+Job submitted: dbgs3a9t9uhs73c8s9j0
+  ramsey_44_54     q44: delta =   -0.86 +- 0.42 kHz  T2* = 1087.2 +- 1766.2 us  A = 0.465  chi2/dof = 51.7/45  (Gaussian decay: delta = -0.86 kHz)
+  ramsey_44_54     q54: delta =   -7.21 +- 0.45 kHz  T2* =  166.3 +- 47.7 us  A = 0.473  chi2/dof = 45.4/45  (Gaussian decay: delta = -7.23 kHz)
+  ramsey_44_45one  q44: delta =   -1.57 +- 0.42 kHz  T2* =  214.6 +- 64.8 us  A = 0.489  chi2/dof = 51.9/45  (Gaussian decay: delta = -1.56 kHz)
+  ramsey_44_45one  q54: delta =   -7.64 +- 0.45 kHz  T2* =  368.4 +- 246.8 us  A = 0.452  chi2/dof = 56.4/45  (Gaussian decay: delta = -7.65 kHz)
+  ramsey_45        q45: delta =  +13.07 +- 0.51 kHz  T2* =   67.7 +- 10.0 us  A = 0.485  chi2/dof = 55.3/45  (Gaussian decay: delta = +13.04 kHz)
+  echo_44_54       q44: T2echo =  271.6 +- 29.9 us  C = 0.971  chi2/dof = 28.2/23
+  echo_44_54       q54: T2echo =  271.3 +- 39.2 us  C = 0.918  chi2/dof = 19.1/23
+  echo_45          q45: T2echo =  128.3 +- 9.2 us  C = 1.000  chi2/dof = 28.7/23
+  ZZ shift of q44 when q45 = |1>: -0.70 +- 0.59 kHz (calibrated zz_4445 8.02 kHz)
+circuits archived: 101
+archived: data\2026-10-28_ibm_kingston_blind\job_dbgs3a9t9uhs73c8s9j0.json | execution: {'created': '2026-10-28T09:34:33.22016Z', 'finished': '2026-10-28T09:35:03.418586Z', 'running': '2026-10-28T09:34:34.788519Z'} | QPU: {'qpu_charge_time_seconds': 6, 'value': 0.097071, 'unit': 'resource_units', 'status': 'complete', 'details': [{'value': 0.097071, 'unit': 'resource_units', 'metric': {'id': 'caffe3ca-729c-5750-8777-df63bbf8bfd9', 'value': 6}}]}

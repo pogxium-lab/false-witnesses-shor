@@ -1,0 +1,31 @@
+  ramsey_44_54     25 delays 0.00..30.02 us x 2 theta, probe (44, 54), excite ()
+  ramsey_44_45one  25 delays 0.00..30.02 us x 2 theta, probe (44, 54), excite (45,)
+  ramsey_45        25 delays 0.00..30.02 us x 2 theta, probe (45,), excite ()
+  echo_44_54       13 delays 0.00..120.06 us x 2 theta, probe (44, 54), excite ()
+  echo_45          13 delays 0.00..120.06 us x 2 theta, probe (45,), excite ()
+  101 circuits, 202 parameter values x 64 shots = 12928 shots; estimated QPU 6.7 s (cap 10 s)
+ISA check (calibration target): all circuits valid
+ISA check (live target): valid
+
+Validation of the sign convention and of the estimators:
+  noiseless exact simulation with detunings {44: 15000.0, 45: -4000.0, 54: 6000.0} Hz and ZZ(44,45) = 8018 Hz:
+  ramsey_44_54     q44: delta =  +15.00 +- 0.00 kHz  T2* = 1914516470.7 +- 247620478676.6 us  A = 0.500  chi2/dof = 0.0/45  (Gaussian decay: delta = +15.00 kHz)
+  ramsey_44_54     q54: delta =   +6.00 +- 0.00 kHz  T2* = 598109867.8 +- 28839827833.4 us  A = 0.500  chi2/dof = 404.5/45  (Gaussian decay: delta = +6.00 kHz)
+  ramsey_44_45one  q44: delta =  +23.02 +- 0.00 kHz  T2* = 14497668954.6 +- 2393366144465.2 us  A = 0.500  chi2/dof = 0.0/45  (Gaussian decay: delta = +23.02 kHz)
+  ramsey_44_45one  q54: delta =   +6.00 +- 0.00 kHz  T2* = 782163517.9 +- 49379990301.6 us  A = 0.500  chi2/dof = 404.5/45  (Gaussian decay: delta = +6.00 kHz)
+  ramsey_45        q45: delta =   -4.00 +- 0.00 kHz  T2* = 943074457.1 +- 50004535666.4 us  A = 0.500  chi2/dof = 702.2/45  (Gaussian decay: delta = -4.00 kHz)
+  echo_44_54       q44: T2echo =  122.5 +- 0.0 us  C = 3.825  chi2/dof = 26000.0/23
+  echo_44_54       q54: T2echo =  122.5 +- 0.0 us  C = 3.825  chi2/dof = 26000.0/23
+  echo_45          q45: T2echo =  122.5 +- 0.0 us  C = 3.825  chi2/dof = 26000.0/23
+  ZZ shift of q44 when q45 = |1>: +8.02 +- 0.00 kHz (calibrated zz_4445 8.02 kHz)
+  recovered: {'ramsey_44_54|q44': {'true': 15000.0, 'fitted': 14999.999937025554}, 'ramsey_44_54|q54': {'true': 6000.0, 'fitted': 5999.999867909614}, 'ramsey_45|q45': {'true': -4000.0, 'fitted': -4000.0001808402653}, 'ramsey_44_45one|q44': {'true': 23018.47137120084, 'fitted': 23018.471207469967}} -> OK
+  Monte Carlo (40 x 64 shots, T2 = calibrated): ramsey_44_54|q44         mean    15.01 sd 0.34 kHz
+  Monte Carlo (40 x 64 shots, T2 = calibrated): ramsey_44_54|q54         mean     6.03 sd 0.36 kHz
+  Monte Carlo (40 x 64 shots, T2 = calibrated): ramsey_44_45one|q44      mean    23.00 sd 0.43 kHz
+  Monte Carlo (40 x 64 shots, T2 = calibrated): ramsey_44_45one|q54      mean     6.00 sd 0.44 kHz
+  Monte Carlo (40 x 64 shots, T2 = calibrated): ramsey_45|q45            mean    -4.05 sd 0.40 kHz
+  Monte Carlo (40 x 64 shots, T2 = calibrated): echo_44_54|q44           mean   238.87 sd 25.11 us
+  Monte Carlo (40 x 64 shots, T2 = calibrated): echo_44_54|q54           mean   170.71 sd 17.80 us
+  Monte Carlo (40 x 64 shots, T2 = calibrated): echo_45|q45              mean   192.15 sd 20.89 us
+
+Pre-registration written: data/2026-10-28_ibm_kingston_blind/prereg_ramsey.json; circuits data\2026-10-28_ibm_kingston_blind\prereg_ramsey_circuits.qpy

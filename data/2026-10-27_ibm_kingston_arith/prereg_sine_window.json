@@ -1,0 +1,151 @@
+{
+ "experiment": "Sine versus uniform coset window: Hadamard test of the translation by N (N=21, m=3, w=8)",
+ "timestamp": "2026-10-27T18:23:51+01:00",
+ "status": "pre-registered before any submission",
+ "calibration_snapshot": "experiences/2026-10-27_kingston_arith/calibration_prereg.json",
+ "settings": {
+  "uniform": {
+   "ideal_X": 0.875,
+   "s": 1.0,
+   "g": 1.0
+  },
+  "sine": {
+   "ideal_X": 0.939693,
+   "s": 1.0,
+   "g": 1.0
+  },
+  "middle_pair": {
+   "ideal_X": 0.5,
+   "s": 1.0,
+   "g": 1.0
+  },
+  "edge_pair": {
+   "ideal_X": 0.0,
+   "s": 1.0,
+   "g": 1.0
+  },
+  "sine_no_translation": {
+   "ideal_X": 1.0,
+   "s": 0.0,
+   "g": 0.0
+  }
+ },
+ "statistic": "D = <X_c>(sine) - <X_c>(uniform), ideal cos(pi/9) - 7/8 = +0.0647",
+ "standard_error": "SE = sqrt[(1 - Xs^2)/ns + (1 - Xu^2)/nu] (binomial, independent settings)",
+ "verdict_rule": "WINDOW EFFECT OBSERVED iff D >= 3 SE; otherwise NO SIGNIFICANT WINDOW EFFECT",
+ "secondary": [
+  "offset-corrected ratio (Xs - Xe)/(Xu - Xe), theory 1.0739",
+  "weighted fit <X_c> = eta A + delta over uniform, sine, middle_pair, edge_pair (chi2, 2 dof)",
+  "sine_no_translation: attenuation of the test without c-T_N"
+ ],
+ "backend": "ibm_kingston",
+ "physical_qubits": [
+  144,
+  124,
+  125,
+  123,
+  136,
+  143,
+  122,
+  117,
+  105,
+  106,
+  107,
+  97
+ ],
+ "roles": {
+  "c": 144,
+  "J": [
+   124,
+   125,
+   123
+  ],
+  "R": [
+   136,
+   143,
+   122,
+   117,
+   105,
+   106,
+   107,
+   97
+  ]
+ },
+ "transpiler_seed": 11,
+ "cz": 133,
+ "duration_us": 10.06,
+ "esp": 0.61476,
+ "dynamical_decoupling": "enabled on the device (static circuit); not modelled in the predictions",
+ "shots": {
+  "uniform": 66000,
+  "sine": 66000,
+  "middle_pair": 16000,
+  "edge_pair": 16000,
+  "sine_no_translation": 16000
+ },
+ "pubs": [
+  [
+   "uniform",
+   "sine"
+  ],
+  [
+   "middle_pair",
+   "edge_pair",
+   "sine_no_translation"
+  ]
+ ],
+ "qpu_estimate_s": 57.7,
+ "budget_s": 60.0,
+ "noiseless_check": {
+  "uniform": {
+   "x": 0.87479,
+   "se": 0.0010833800254296737,
+   "ideal": 0.8749999999999999
+  },
+  "sine": {
+   "x": 0.94108,
+   "se": 0.0007562024649523431,
+   "ideal": 0.9396926207859086
+  },
+  "middle_pair": {
+   "x": 0.49966,
+   "se": 0.0019369304122760838,
+   "ideal": 0.4999999999999999
+  },
+  "edge_pair": {
+   "x": 0.00036,
+   "se": 0.00223606783260258,
+   "ideal": 0.0
+  },
+  "sine_no_translation": {
+   "x": 1.0,
+   "se": 2.2360679774997897e-09,
+   "ideal": 1.0
+  }
+ },
+ "noisy_predictions": {
+  "1.0": {
+   "X": {
+    "uniform": 0.56398,
+    "sine": 0.60005,
+    "middle_pair": 0.29636,
+    "edge_pair": -0.00303,
+    "sine_no_translation": 0.83774
+   },
+   "D": 0.03607,
+   "z_expected": 8.06
+  },
+  "1.5": {
+   "X": {
+    "uniform": 0.45492,
+    "sine": 0.48194,
+    "middle_pair": 0.23052,
+    "edge_pair": 6e-05,
+    "sine_no_translation": 0.76667
+   },
+   "D": 0.02702,
+   "z_expected": 5.56
+  }
+ },
+ "noise_model": "noise_model.noisy_copy (calibrated depolarising gate errors, symmetric readout errors, T1/T2 relaxation in idle periods), exact density-matrix simulation"
+}

@@ -1,0 +1,44 @@
+Backend/calibration: data/2026-10-27_ibm_kingston_arith/calibration_prereg.json
+N=21, m=3, w=8, v=1, +13 x 2 (1 + 26 = 6 + 21: one overflow); 12 logical qubits, 133 CZ, duration ~10.1 us, ESP 0.615
+  physical qubits [144, 124, 125, 123, 136, 143, 122, 117, 105, 106, 107, 97]  (c = 144, J = [124, 125, 123], R = [136, 143, 122, 117, 105, 106, 107, 97]), transpiler seed 11
+Plan: {'uniform': 66000, 'sine': 66000, 'middle_pair': 16000, 'edge_pair': 16000, 'sine_no_translation': 16000} -> 180000 shots, estimated QPU time 57.7 s (budget 60 s)
+Transpiled circuit saved: data\2026-10-27_ibm_kingston_arith\prereg_sine_window_circuits.qpy
+
+Noiseless check of the transpiled circuit:
+  uniform              noiseless <X_c> = +0.8748 +- 0.0011 (ideal 0.8750)
+  sine                 noiseless <X_c> = +0.9411 +- 0.0008 (ideal 0.9397)
+  middle_pair          noiseless <X_c> = +0.4997 +- 0.0019 (ideal 0.5000)
+  edge_pair            noiseless <X_c> = +0.0004 +- 0.0022 (ideal 0.0000)
+  sine_no_translation  noiseless <X_c> = +1.0000 +- 0.0000 (ideal 1.0000)
+
+DRY RUN: noisy density-matrix simulation, scales [1.0, 1.5]
+  s=1.0: noisy <X_c> uniform +0.5640, sine +0.6001, middle_pair +0.2964, edge_pair -0.0030, sine_no_translation +0.8377; D = +0.0361, expected significance 8.1 sigma [332 s]
+-- analysis of one binomial sample of the plan, error scale 1.0 --
+
+=== Sine versus uniform window, coset N=21 (w=8, M=8), Hadamard test of T_N ===
+  uniform              <X_c> = +0.5612 +- 0.0032   (ideal 0.8750, 66000 shots)
+  sine                 <X_c> = +0.6022 +- 0.0031   (ideal 0.9397, 66000 shots)
+  middle_pair          <X_c> = +0.2883 +- 0.0076   (ideal 0.5000, 16000 shots)
+  edge_pair            <X_c> = -0.0190 +- 0.0079   (ideal 0.0000, 16000 shots)
+  sine_no_translation  <X_c> = +0.8319 +- 0.0044   (ideal 1.0000, 16000 shots)
+  D = sine - uniform = +0.0409 +- 0.0045  (+9.1 sigma; ideal +0.0647)
+  offset-corrected ratio (Xs - Xe)/(Xu - Xe) = 1.0706 +- 0.0215  (theory 1.0739; no window effect: 1; +3.3 sigma from 1, -0.2 sigma from theory)
+  fit <X_c> = eta A + delta: eta = 0.6707 +- 0.0084, delta = -0.0279 +- 0.0071, chi2 = 8.2 (2 dof)
+  sine_no_translation (attenuation of the test without c-T_N): 0.8319
+  VERDICT: WINDOW EFFECT OBSERVED: sine - uniform >= 3 sigma
+  s=1.5: noisy <X_c> uniform +0.4549, sine +0.4819, middle_pair +0.2305, edge_pair +0.0001, sine_no_translation +0.7667; D = +0.0270, expected significance 5.6 sigma [319 s]
+-- analysis of one binomial sample of the plan, error scale 1.5 --
+
+=== Sine versus uniform window, coset N=21 (w=8, M=8), Hadamard test of T_N ===
+  uniform              <X_c> = +0.4579 +- 0.0035   (ideal 0.8750, 66000 shots)
+  sine                 <X_c> = +0.4817 +- 0.0034   (ideal 0.9397, 66000 shots)
+  middle_pair          <X_c> = +0.2165 +- 0.0077   (ideal 0.5000, 16000 shots)
+  edge_pair            <X_c> = -0.0080 +- 0.0079   (ideal 0.0000, 16000 shots)
+  sine_no_translation  <X_c> = +0.7632 +- 0.0051   (ideal 1.0000, 16000 shots)
+  D = sine - uniform = +0.0238 +- 0.0049  (+4.9 sigma; ideal +0.0647)
+  offset-corrected ratio (Xs - Xe)/(Xu - Xe) = 1.0511 +- 0.0268  (theory 1.0739; no window effect: 1; +1.9 sigma from 1, -0.8 sigma from theory)
+  fit <X_c> = eta A + delta: eta = 0.5387 +- 0.0085, delta = -0.0209 +- 0.0072, chi2 = 25.5 (2 dof)
+  sine_no_translation (attenuation of the test without c-T_N): 0.7632
+  VERDICT: WINDOW EFFECT OBSERVED: sine - uniform >= 3 sigma
+
+Pre-registration written: data/2026-10-27_ibm_kingston_arith/prereg_sine_window.json

@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite both the preprint and this archive as below."
+type: software
+title: "False witnesses for small Shor experiments: code and data"
+abstract: >-
+  Generic Shor circuit generator laid out on a line of heavy-hex qubits, exact arithmetic model, false-witness
+  controls, pre-registration and time-stamping tools, and the raw data of ten IBM Quantum jobs (ibm_kingston,
+  27-28 October 2026) with the scripts that recompute every hardware number, figure and table of the preprint.
+version: "1.0"
+date-released: 2026-10-28
+doi: 10.5281/zenodo.23731576
+repository-code: "https://github.com/pogxium-lab/false-witnesses-shor"
+url: "https://pogxium.com"
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - family-names: Chauffert
+    given-names: Clément
+    orcid: "https://orcid.org/0009-0002-8230-0236"
+    affiliation: Independent researcher
+    email: "contact@pogxium.com"
+    website: "https://pogxium.com"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23731576
+    description: "Archived code and data (this release)"
+  - type: doi
+    value: 10.5281/zenodo.23731578
+    description: "Preprint"
+keywords:
+  - Shor's algorithm
+  - quantum circuits
+  - modular arithmetic
+  - false witnesses
+  - pre-registration
+  - IBM Quantum
+  - benchmarking
+preferred-citation:
+  type: article
+  title: "False witnesses for small Shor experiments: a coherent modular multiplication modulo 21"
+  doi: 10.5281/zenodo.23731578
+  publisher:
+    name: Zenodo
+  status: preprint
+  authors:
+    - family-names: Chauffert
+      given-names: Clément
+      orcid: "https://orcid.org/0009-0002-8230-0236"
+      affiliation: Independent researcher
+  year: 2026

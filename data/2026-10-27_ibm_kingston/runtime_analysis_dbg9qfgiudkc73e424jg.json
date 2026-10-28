@@ -1,0 +1,25 @@
+{
+ "random_baseline": 0.25,
+ "true": {
+  "k": 17367,
+  "n": 60000,
+  "p": 0.28945
+ },
+ "classical_exponent": {
+  "k": 11694,
+  "n": 46666,
+  "p": 0.2505892941327733
+ },
+ "decohered_e2": {
+  "k": 11400,
+  "n": 46666,
+  "p": 0.24428920413148758
+ },
+ "scrambled_constants": {
+  "k": 11370,
+  "n": 46666,
+  "p": 0.24364633780482578
+ },
+ "z_min": 14.235519135548257,
+ "verdict": "SIGNAL: the true circuit beats every control and the random baseline at >= 3 sigma"
+}
