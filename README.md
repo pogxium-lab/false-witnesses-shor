@@ -12,8 +12,8 @@ number, figure and table of the preprint.
 
 | | |
 |---|---|
-| Preprint | [doi:10.5281/zenodo.23731578](https://doi.org/10.5281/zenodo.23731578) |
-| Archived code and data (v1.0) | [doi:10.5281/zenodo.23731576](https://doi.org/10.5281/zenodo.23731576) |
+| Preprint (all versions) | [doi:10.5281/zenodo.23731577](https://doi.org/10.5281/zenodo.23731577) |
+| Archived code and data (all versions) | [doi:10.5281/zenodo.23731575](https://doi.org/10.5281/zenodo.23731575) |
 | Source repository | <https://github.com/pogxium-lab/false-witnesses-shor> |
 | Website | <https://pogxium.com> |
 
@@ -439,17 +439,17 @@ Please cite the preprint and, if you use the code or data, this archive (see als
   title     = {False witnesses for small {Shor} experiments: a coherent modular multiplication modulo 21},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23731578},
+  doi       = {10.5281/zenodo.23731577},
   note      = {Preprint}
 }
 
 @software{chauffert2026falsewitnesses_code,
   author    = {Chauffert, Cl{\'e}ment},
   title     = {False witnesses for small {Shor} experiments: code and data},
-  version   = {1.0},
+  version   = {1.1},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23731576},
+  doi       = {10.5281/zenodo.23731575},
   url       = {https://github.com/pogxium-lab/false-witnesses-shor}
 }
 ```
