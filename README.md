@@ -14,6 +14,7 @@ number, figure and table of the preprint.
 |---|---|
 | Preprint (all versions) | [doi:10.5281/zenodo.23731577](https://doi.org/10.5281/zenodo.23731577) |
 | Archived code and data (all versions) | [doi:10.5281/zenodo.23731575](https://doi.org/10.5281/zenodo.23731575) |
+| Questions and discussion | [GitHub Discussions](https://github.com/pogxium-lab/false-witnesses-shor/discussions) |
 | Source repository | <https://github.com/pogxium-lab/false-witnesses-shor> |
 | Website | <https://pogxium.com> |
 
