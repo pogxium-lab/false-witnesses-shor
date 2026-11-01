@@ -116,7 +116,7 @@ N=21: true 0.0621±0.0010 {'classical_exponent': (0.0633, -0.7), 'decohered_e2':
 Replication (job 3): SHA256SUMS True | circuits identical to job 2: True | tags ['prereg_sha256:3b2ad7bc133e8e1c3bbd6a8deec12dcc17c6c286d8e8a94b973cf35520404538']
   z job 3: {'mult_by_1_DD': 5.9, 'wrong_constant_DD': 4.9, 'classical_exponent_DD': 5.7} SIGNAL REPLICATED | job 3 - job 2 +0.7 | mean of DD runs +0.0202±0.0019 (10.5 sigma from 0)
 ...
-  D=+0.0319±0.0046 (+7.0 sigma; ideal +0.0647, pred +0.0361, 8.06 sigma) ratio=1.0632±0.0247 (theory 1.0739, +2.6 sigma from 1) eta=0.5789±0.0084 delta=+0.0263±0.0071 chi2=4.5
+  D=+0.0319±0.0046 (+7.0 sigma; ideal +0.0647, pred +0.0361, 8.06 sigma) ratio=1.0632±0.0094 (theory 1.0739, +6.7 sigma from 1) eta=0.5789±0.0084 delta=+0.0263±0.0071 chi2=4.5
 Blind test N=21 (28 Oct): SHA256SUMS True | stamped files {...} | chain True | RFC 3161 True
     block 973529 00000000000000000001... header time 2026-10-28T09:14:00+00:00 k = 9 a = 19 NOT TESTABLE -> redraw
     block 973530 00000000000000000001... header time 2026-10-28T09:20:50+00:00 k = 7 a = 16 testable
@@ -447,7 +447,7 @@ Please cite the preprint and, if you use the code or data, this archive (see als
 @software{chauffert2026falsewitnesses_code,
   author    = {Chauffert, Cl{\'e}ment},
   title     = {False witnesses for small {Shor} experiments: code and data},
-  version   = {1.1},
+  version   = {1.2},
   year      = {2026},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.23731575},

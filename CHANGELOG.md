@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2 — 2026-11-01
+
+- Corrected the uncertainty of the offset-corrected ratio (X_s - X_e)/(X_u - X_e) of the sine-window run: the edge-pair
+  term X_e enters numerator and denominator and its error is now propagated once (delta method). The ratio is
+  1.0632 ± 0.0094 (6.7 sigma from 1, 1.1 sigma below the ideal 1.074), instead of ± 0.0247 (2.6 sigma). Fixed in
+  `src/run_ibm_sine_window.py` and `analysis/make_figures_arith.py`; `figures/numbers_arith.json` regenerated. The
+  archived run outputs in `data/` are unchanged (they keep the value printed at run time).
+- Preprint v1.2: same correction in the text, and clarifications on what the experimental design uses (inputs of the
+  generator are N, a and t; the choice t = 5 for the factoring runs and its dependence on r; the testability rule of
+  the blind run is equivalent to r(a) < 2^t(a); the classical check C2 is not poly(log N) in general). No data,
+  pre-registered statistic or verdict changes.
+
 ## v1.1 — 2026-10-28
 
 - Release files renamed (`false-witnesses-shor-v1.1.zip`); citations now use the concept DOIs, which always

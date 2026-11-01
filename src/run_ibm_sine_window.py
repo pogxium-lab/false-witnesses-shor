@@ -243,7 +243,8 @@ def analyse(xs):
         xe, se_, _ = xs["edge_pair"]
         num, den = xs_ - xe, xu - xe
         r = num / den
-        sr = abs(r) * math.sqrt((ss ** 2 + se_ ** 2) / num ** 2 + (su ** 2 + se_ ** 2) / den ** 2) if den else float("nan")
+        # delta method; X_e enters numerator and denominator, its error is propagated once (fixed in v1.2)
+        sr = math.sqrt(ss ** 2 + (r * su) ** 2 + ((r - 1) * se_) ** 2) / abs(den) if den else float("nan")
         rth = ideal["sine"] / ideal["uniform"]
         print(f"  offset-corrected ratio (Xs - Xe)/(Xu - Xe) = {r:.4f} +- {sr:.4f}  (theory {rth:.4f}; no window "
               f"effect: 1; {(r - 1) / sr:+.1f} sigma from 1, {(r - rth) / sr:+.1f} sigma from theory)")

@@ -455,7 +455,8 @@ def experiment_w():
     D, sD = xs["x"] - xu["x"], math.hypot(xs["se"], xu["se"])
     num, den = xs["x"] - xe["x"], xu["x"] - xe["x"]
     r = num / den
-    sr = abs(r) * math.sqrt((xs["se"] ** 2 + xe["se"] ** 2) / num ** 2 + (xu["se"] ** 2 + xe["se"] ** 2) / den ** 2)
+    # delta method; X_e enters numerator and denominator, its error is propagated once (fixed in v1.2)
+    sr = math.sqrt(xs["se"] ** 2 + (r * xu["se"]) ** 2 + ((r - 1) * xe["se"]) ** 2) / abs(den)
     labs = ["uniform", "sine", "middle_pair", "edge_pair"]
     Av = np.array([ideal[k] for k in labs]); Xv = np.array([X[k]["x"] for k in labs])
     Wt = np.array([1 / X[k]["se"] ** 2 for k in labs])
@@ -468,7 +469,7 @@ def experiment_w():
                ratio_theory=ideal["sine"] / ideal["uniform"], z_ratio_vs_1=(r - 1) / sr,
                eta=float(eta), eta_se=float(math.sqrt(cov[0, 0])), delta=float(delta),
                delta_se=float(math.sqrt(cov[1, 1])), chi2=chi2)
-    for k in ("D", "se_D", "ratio", "se_ratio", "eta", "delta", "chi2"):
+    for k in ("D", "se_D", "ratio", "eta", "delta", "chi2"):  # se_ratio corrected in v1.2, archived value kept
         assert abs(out[k] - rt[k]) < 1e-9, k
     # infidelity 1 - |overlap|^2 per overflow, for m window qubits (M = 2^m)
     out["infidelity"] = {m: dict(uniform=1 - (1 - 2 ** -m) ** 2, sine=math.sin(math.pi / (2 ** m + 1)) ** 2)
